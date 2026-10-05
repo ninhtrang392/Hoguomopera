@@ -1,0 +1,32 @@
+/* Paper ticket, shared by checkout preview and issued tickets. */
+.booking-page .admission-ticket{position:relative;isolation:isolate;overflow:hidden;color:#30271e;border:1px solid #ab8a53;outline:4px solid #f4e5c7;outline-offset:0;border-radius:22px 22px 17px 17px;padding:8px;background:radial-gradient(ellipse at 30% 8%,#fffaf0c9,transparent 55%),repeating-radial-gradient(ellipse at 90% 70%,#b8985810 0 1px,transparent 2px 13px),#f3e6cc;box-shadow:inset 0 0 0 5px #fbf1dd,inset 0 0 0 6px #c1a36b,0 18px 45px #0005;text-align:left}
+.booking-page .admission-ticket{
+  outline:none;
+  -webkit-mask:radial-gradient(circle at left 40%,transparent 17px,#000 18px) left/50% 100% no-repeat,radial-gradient(circle at right 40%,transparent 17px,#000 18px) right/50% 100% no-repeat;
+  mask:radial-gradient(circle at left 40%,transparent 17px,#000 18px) left/50% 100% no-repeat,radial-gradient(circle at right 40%,transparent 17px,#000 18px) right/50% 100% no-repeat;
+}
+.booking-page .admission-ticket:before,.booking-page .admission-ticket:after{content:none}
+.booking-page .ticket-top{padding:12px 12px 20px;border-bottom:1px dashed #b99b65;text-align:left}
+.ticket-masthead{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:2px 5px 14px}.ticket-masthead img{width:100px;height:42px;object-fit:contain;filter:sepia(.4) saturate(.7)}.ticket-edition{font:9px/1.6 Arial,sans-serif;letter-spacing:.06em;white-space:pre-line;text-align:right;color:#96805e}
+.ticket-art-panel{position:relative;overflow:hidden;border-radius:11px;margin-bottom:18px;background:#21180f;border:1px solid #c2a265}
+.booking-page .ticket-artwork{display:block;width:100%;height:auto;aspect-ratio:1.5;object-fit:cover;object-position:left center;margin:0;max-width:100%}
+.ticket-art-panel:after{content:'';position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#130d09e6);pointer-events:none}
+.booking-page .ticket-art-panel h3{position:absolute;bottom:17px;left:20px;right:16px;z-index:1;margin:0;font:400 clamp(28px,3vw,42px)/1.05 var(--heading);color:#f6e5bb;text-transform:uppercase;max-width:270px;letter-spacing:.02em;text-shadow:0 2px 12px #000}
+.booking-page .ticket-art-banner .ticket-artwork{aspect-ratio:2019/760;object-fit:contain;object-position:center}
+.ticket-art-banner:after{content:none}
+.booking-page .ticket-art-banner h3{display:none}
+.booking-page .ticket-date{display:flex;justify-content:space-between;gap:12px;margin:0 10px 12px;font:500 14px/1.5 var(--heading);color:#28221b}
+.ticket-venue{margin:0 10px 2px;font-size:15px}.ticket-address{margin:0 10px;font-size:12px;color:#94816a}
+.booking-page .ticket-middle{padding:18px 20px 0;border:0}.booking-page .ticket-middle:before,.booking-page .ticket-middle:after{display:none}
+.ticket-facts{margin:0 0 16px;display:grid;gap:10px}.ticket-facts>div{display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px}.ticket-facts dt{font-size:10px;color:#9a805d;letter-spacing:.03em;padding-top:3px}.ticket-facts dd{margin:0;font-size:14px;line-height:1.5;color:#332a20;white-space:pre-line;overflow-wrap:anywhere}
+.ticket-amount{border-top:1px dashed #b99b65;padding:14px 0 4px;display:grid;gap:3px}.ticket-amount>span{font-size:10px;color:#987b54}.ticket-amount>strong{font:600 34px/1.15 var(--heading);color:#795638;letter-spacing:-.04em}.ticket-amount>small{font-size:11px;color:#8a7358}
+.booking-page .ticket-bottom{padding:16px 20px 14px;text-align:left}
+.ticket-codes{display:grid;grid-template-columns:82px minmax(0,1fr);gap:14px;align-items:center;background:#fffaf09c;border:1px solid #e3d3b5;border-radius:9px;padding:12px;box-shadow:0 3px 12px #9a784719}
+.booking-page .ticket-codes img{width:82px;height:82px;background:white;object-fit:contain}.ticket-code-placeholder{width:82px;height:82px;display:grid;place-content:center;text-align:center;border:1px dashed #baa57f;color:#9a8262;font-size:10px;white-space:pre-line}
+.ticket-codes small{display:block;font-size:9px;letter-spacing:.04em;color:#8d7451}.booking-page .ticket-code{font:12px/1.5 Arial,sans-serif!important;margin:5px 0!important;overflow-wrap:anywhere;color:#392b1f!important}
+.ticket-barcode{height:29px;margin:7px 0 4px;background:repeating-linear-gradient(90deg,#30271e 0 2px,transparent 2px 4px,#30271e 4px 5px,transparent 5px 8px,#30271e 8px 12px,transparent 12px 14px)}
+.booking-page .ticket-thanks{text-align:center;font-size:9px;letter-spacing:.065em;line-height:1.6;white-space:pre-line;color:#9e8058;margin:19px 0 12px}
+.booking-page .ticket-demo-note{text-align:center;color:#795638;font-size:10px;letter-spacing:.03em;margin:10px 0}
+.ticket-pay{width:100%;border:1px solid #ab7450;border-radius:6px;color:#fff2d7;background:linear-gradient(110deg,#795638,#49311f);font:500 14px/1.5 var(--heading);padding:14px 10px;box-shadow:0 3px 8px #704c3030}.ticket-pay:hover:not(:disabled){background:#63432b}.ticket-pay:disabled{opacity:.5}
+@media(max-width:760px){.booking-page .checkout-layout>aside{max-width:460px;width:calc(100% - 10px);justify-self:center}.ticket-facts>div{grid-template-columns:74px minmax(0,1fr);gap:8px}.booking-page .ticket-middle,.booking-page .ticket-bottom{padding-inline:14px}.ticket-amount>strong{font-size:31px}.ticket-codes{gap:9px;padding:9px}.booking-page .ticket-date{font-size:12px}}
+@media print{.ticket-pay{display:none!important}}

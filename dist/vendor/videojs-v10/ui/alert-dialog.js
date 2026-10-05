@@ -1,0 +1,3 @@
+/*! Video.js | https://videojs.org/about-this-player */
+import{t as e}from"../safe-define-BnsQT9yb.js";import{t}from"../data-CSGwdonW.js";import{t as n}from"../core-BDoHcwhJ.js";import{n as r}from"../element-a-HCTL7B.js";const i={...t};var a=class extends r{static{this.tagName=`media-alert-dialog`}constructor(){super({core:new n,stateAttrMap:i,idPrefix:`alert-dialog`,bindTrigger:!1})}};e(a);
+//# sourceMappingURL=alert-dialog.js.map

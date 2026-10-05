@@ -1,0 +1,3 @@
+/*! Video.js | https://videojs.org/about-this-player */
+import{t as e}from"../../custom-media-element-C0oZE2b2.js";import{t}from"../../safe-define-BnsQT9yb.js";import{t as n}from"../../adapter-CDdANT3K.js";import{t as r}from"../../media-attach-mixin-C-EP-GIe.js";import{t as i}from"../../mixin-BMUOfrL2.js";import{t as a}from"../../mixin-Dr3Ny0KC.js";var o=class extends i(n){static{this.defaultProps={...n.defaultProps,src:``,source:null}}};const s=a(r(e(`video`,o)));var c=class extends s{},l=class extends c{static{this.tagName=`mux-video`}};t(l);export{l as MuxVideoElement};
+//# sourceMappingURL=spf.js.map

@@ -1,0 +1,2 @@
+import{t as e}from"./custom-media-element-C0oZE2b2.js";import{t}from"./safe-define-BnsQT9yb.js";import{t as n}from"./media-attach-mixin-C-EP-GIe.js";import{t as r}from"./mixin-Mx-Z8bOZ.js";import{t as i}from"./adapter-D6LV4hju.js";const a=r(n(e(`audio`,class extends i{})));var o=class extends a{},s=class extends o{static{this.tagName=`mux-audio`}};t(s);export{s as t};
+//# sourceMappingURL=hls-js-D5Tgp9Zt.js.map

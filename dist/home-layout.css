@@ -1,0 +1,85 @@
+/* One shared content edge from the home header through the footer. */
+:root {
+    --site-gutter: max(6vw, calc((100vw - 1640px) / 2));
+}
+
+@media (max-width: 1100px) {
+    :root { --site-gutter: 32px; }
+}
+
+@media (max-width: 760px) {
+    :root { --site-gutter: 20px; }
+}
+
+.container,
+.programs .container,
+.collection-viewport {
+    width: calc(100% - var(--site-gutter) - var(--site-gutter));
+    max-width: none;
+    margin-inline: auto;
+}
+
+.overture-copy,
+.finale-copy,
+.theatre-values,
+.journey-caption {
+    left: var(--site-gutter);
+}
+
+.hero-bottom-bar,
+.media-masthead,
+.media-footer,
+.theatre-intro-label,
+.theatre-intro-copy,
+.theatre-intro-caption,
+.theatre-gallery-label,
+.journey-chrome {
+    left: var(--site-gutter);
+    right: var(--site-gutter);
+}
+
+.theatre-quote,
+.finale-scroll,
+.footer-back-top {
+    right: var(--site-gutter);
+}
+
+.theatre-panel,
+.theatre.is-motion .theatre-panel {
+    padding-inline: var(--site-gutter);
+}
+
+.theatre-gallery .theatre-photo-pair {
+    max-width: 100%;
+}
+
+.booking-visual {
+    margin-left: var(--site-gutter);
+}
+
+.booking-copy {
+    padding-right: var(--site-gutter);
+}
+
+.opera-footer .footer-main {
+    max-width: none;
+    padding-inline: var(--site-gutter);
+}
+
+.footer-bottom {
+    padding-inline: var(--site-gutter);
+}
+
+@media (max-width: 900px) {
+    .booking-layout { padding-inline: var(--site-gutter); }
+    .booking-visual { margin-left: 0; }
+    .booking-copy { padding-inline: 0; max-width: none; }
+}
+
+@media (max-width: 760px) {
+    .overture-copy,
+    .finale-copy {
+        right: var(--site-gutter);
+        width: auto;
+    }
+}

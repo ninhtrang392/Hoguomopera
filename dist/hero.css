@@ -1,0 +1,254 @@
+/* Architectural hero: supplied artwork layered around live typography. */
+.hero.hero-architecture[hidden] { display: none; }
+
+.hero.hero-architecture {
+    position: relative;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 560px;
+    max-height: none;
+    overflow: hidden;
+    isolation: isolate;
+    background: #051b39;
+    color: #fff8e7;
+}
+
+.hero-scene {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.hero-scene img {
+    position: absolute;
+    pointer-events: none;
+}
+
+.hero-sky {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-brand {
+    position: absolute;
+    z-index: 1;
+    left: 9%;
+    top: 15%;
+}
+
+.hero-architecture .hero-brand h1,
+html[lang=en] .hero-architecture .hero-brand h1 {
+    margin: 65px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: .22em;
+    row-gap: 16px;
+    max-width: none;
+    font-family: var(--heading);
+    font-size: clamp(78px, 10.5vw, 260px);
+    font-weight: 100;
+    line-height: 1.15;
+    letter-spacing: .025em;
+    white-space: nowrap;
+}
+
+.hero-opera {
+    grid-column: 1 / -1;
+    justify-self: start;
+    font-size: clamp(20px, 2.1vw, 50px);
+    font-weight: 100;
+    line-height: 1.5;
+    letter-spacing: 1.3em;
+}
+
+.hero-drum {
+    z-index: 1;
+    width: 76%;
+    height: auto;
+    left: -41%;
+    bottom: -31%;
+    opacity: .85;
+}
+.hero-cranes {
+    z-index: 2;
+    width: 16%;
+    height: auto;
+    left: 14%;
+    top: 46%;
+}
+.hero-theatre {
+    z-index: 3;
+    inset: auto 0 -11% auto;
+    width: 100%;
+    height: auto;
+    /* Keep the artwork full-width instead of shrinking it to fit the height. */
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    object-position: right bottom;
+}
+.hero-bottom-shade {
+    position: absolute;
+    z-index: 4;
+    inset: 65% 0 0;
+    background: linear-gradient(transparent, #020e22b8);
+    pointer-events: none;
+}
+.hero-bottom-bar {
+    position: absolute;
+    z-index: 5;
+    inset: auto 3% max(28px, env(safe-area-inset-bottom));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+.hero-explore {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 48px;
+}
+.hero-explore span[data-i18n] {
+    font-size: 13px;
+    letter-spacing: .15em;
+}
+.hero-explore-line {
+    width: 40px;
+    height: 1px;
+    background: currentColor;
+}
+.hero-explore svg {
+    width: 22px;
+    height: 22px;
+}
+.hero-booking {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.hero-schedule {
+    display: grid;
+    gap: 4px;
+    padding-right: 32px;
+    border-right: 1px solid #fff8e780;
+}
+.hero-schedule span {
+    font-size: 12px;
+    letter-spacing: .15em;
+}
+.hero-schedule strong {
+    font-size: 15px;
+    font-weight: 400;
+}
+.hero-book {
+    min-height: 48px;
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: #fff8e7;
+    color: #102442;
+    gap: 10px;
+}
+.hero-book svg {
+    width: 18px;
+    height: 18px;
+}
+.hero-book:hover {
+    background: #eddbb2;
+}
+.hero-bottom-bar a:focus-visible {
+    outline: 2px solid #fff8e7;
+    outline-offset: 6px;
+}
+.footer {
+    background: var(--black);
+}
+@media (max-width: 760px),
+(max-aspect-ratio: 1/1) {
+    .hero.hero-architecture {
+        min-height: 620px;
+    }
+    .hero-scene {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: auto;
+    }
+    .hero-brand {
+        left: 6%;
+        top: 20%;
+    }
+    .hero-architecture .hero-brand h1,
+    html[lang=en] .hero-architecture .hero-brand h1 {
+        font-size: 13.5vw;
+        margin: 0;
+        letter-spacing: .025em;
+    }
+    .hero-opera {
+        font-size: 18px;
+        letter-spacing: 1em;
+    }
+    .hero-theatre {
+        inset: auto 0 -5% auto;
+        width: 108%;
+        height: auto;
+        max-width: none;
+    }
+    .hero-drum {
+        width: 150%;
+        left: -94%;
+        bottom: -7%;
+    }
+    .hero-cranes {
+        width: 38%;
+        left: 5%;
+        top: 39%;
+    }
+    .hero-bottom-bar {
+        inset: auto 6% max(24px, env(safe-area-inset-bottom));
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+    .hero-explore {
+        gap: 12px;
+    }
+    .hero-explore span[data-i18n] {
+        font-size: 12px;
+    }
+    .hero-explore-line {
+        width: 28px;
+    }
+    .hero-booking {
+        justify-content: space-between;
+        gap: 14px;
+    }
+    .hero-schedule {
+        border: 0;
+        padding: 0;
+    }
+    .hero-schedule strong {
+        font-size: 13px;
+    }
+    .hero-book {
+        padding: 12px 18px;
+        flex-shrink: 0;
+    }
+    .hero-bottom-shade {
+        top: 55%;
+        background: linear-gradient(transparent, #020e22ed);
+    }
+}
+@media (max-height: 600px) and (min-width: 761px) {
+    .hero-brand {
+        top: 18%;
+    }
+    .hero-architecture .hero-brand h1,
+    html[lang=en] .hero-architecture .hero-brand h1 {
+        font-size: 10.5vw;
+    }
+}

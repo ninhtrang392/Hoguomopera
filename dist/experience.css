@@ -1,0 +1,100 @@
+/* Auditorium photography, warm dark surfaces and gold wayfinding. */
+.experience {
+    background: #100e0a;
+    color: #f2e6c4;
+    border-top: 1px solid #d5b97124;
+}
+
+.experience .experience-inner {
+    display: grid;
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.65fr);
+    align-items: center;
+    gap: clamp(28px, 4vw, 72px);
+    min-height: 620px;
+    padding-block: clamp(64px, 8vw, 120px);
+}
+
+.experience .experience-copy {
+    width: 100%;
+    padding: 0;
+}
+
+.experience .eyebrow { color: #d5b971; }
+.experience h2 { color: #f2e6c4; font-size: clamp(40px, 4.6vw, 72px); }
+.experience .section-description { color: #c6bdac; font-size: 16px; line-height: 1.8; }
+.experience .explore-hint { color: #bbaa85; font-size: 13px; line-height: 1.6; }
+.experience .mouse-icon { border-color: #bbaa85; }
+.experience .mouse-icon:before { background: #d5b971; }
+
+.experience .hall-view {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1672 / 941;
+    background: #100e0a;
+    border: 1px solid #d5b97140;
+    box-shadow: 0 24px 70px #0006;
+}
+
+.experience .hall-view > img {
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: normal;
+    mask-image: none;
+    filter: brightness(.78) saturate(.78);
+}
+
+.experience .hall-view:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #100e0a08 55%, #100e0a66);
+    pointer-events: none;
+}
+
+.experience .hotspot {
+    z-index: 2;
+    min-height: 44px;
+    color: #f2e6c4;
+    background: #100e0ae8;
+    border: 1px solid #d5b97180;
+    transform: translate(-50%, -50%);
+}
+
+.experience .hotspot:hover,
+.experience .hotspot[aria-expanded=true] { background: #554125; }
+.experience .hotspot-dot { border-color: #d5b971; }
+.experience .hotspot-dot:after { background: #e4c78c; }
+.experience .hotspot.stage { left: 50%; top: 64%; }
+.experience .hotspot.balcony { left: 84%; top: 43%; }
+.experience .hotspot.seats { left: 35%; top: 88%; }
+
+.experience .spot-info {
+    right: 4%;
+    bottom: 5%;
+    max-width: 92%;
+    background: #191710f5;
+    color: #e5dbc6;
+    border-color: #b99b60;
+}
+
+.experience .spot-info h3 { color: #efd8a6; }
+.experience .spot-info p { font-size: 14px; }
+.experience .image-disclaimer { color: #a99775; letter-spacing: .18em; font-size: 11px; }
+
+@media (max-width: 900px) {
+    .experience .experience-inner { grid-template-columns: 1fr; min-height: 0; gap: 36px; }
+    .experience .experience-copy { max-width: 560px; }
+    .experience .section-description { max-width: 480px; }
+    .experience .explore-hint { margin-top: 24px; }
+    .experience .hall-view { margin-bottom: 12px; }
+}
+
+@media (max-width: 480px) {
+    .experience .experience-inner { width: calc(100% - 40px); padding-block: 48px 56px; }
+    .experience h2 { font-size: 42px; }
+    .experience .hotspot { font-size: 11px; gap: 5px; padding: 5px 8px 5px 5px; }
+    .experience .hotspot.balcony { left: 82%; top: 41%; }
+    .experience .spot-info { bottom: 3%; padding: 20px; }
+}

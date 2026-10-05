@@ -1,0 +1,1 @@
+{"version":3,"file":"noop-Ch0IHcOP.js","names":[],"sources":["../utils/dist/function/noop.js"],"sourcesContent":["//#region src/function/noop.ts\nfunction noop(..._args) {}\n//#endregion\nexport { noop };\n\n//# sourceMappingURL=noop.js.map"],"mappings":"AACA,SAAS,EAAK,GAAG,EAAO,CAAC"}

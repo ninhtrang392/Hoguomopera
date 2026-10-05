@@ -1,0 +1,2 @@
+import{t as e}from"./safe-define-BnsQT9yb.js";import{i as t,t as n}from"./create-player-QqbEYf9t.js";const{PlayerElement:r,PlayerController:i}=n({features:t});var a=class extends r{static{this.tagName=`live-audio-player`}};e(a);
+//# sourceMappingURL=player-DkhA046E.js.map

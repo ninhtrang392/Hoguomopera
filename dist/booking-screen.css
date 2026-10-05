@@ -1,0 +1,136 @@
+/* Transaction layout: programme artwork, date cards, auditorium and order. */
+.booking-page .seat:not(:disabled){background:var(--category);color:#fff;box-shadow:inset 0 2px 3px #ffffff4d}.booking-page .seat:disabled{background:color-mix(in srgb,var(--category) 22%,#191919);border-color:color-mix(in srgb,var(--category) 65%,#555);color:#c5c1bb;opacity:.6}.booking-page .seat[aria-pressed=true]{background:#ffe9a1;color:#281b08;border-color:#ffe9a1;box-shadow:0 0 0 2px #d5b15e,0 0 12px #e5c16d}
+.demo-banner{padding:12px 16px;margin-bottom:16px;background:#37271c;color:#ead5af;border:1px solid #bd956647;border-radius:6px;font-size:13px}.demo-banner strong{display:inline-block;margin-right:10px;color:#f6d87b;letter-spacing:.12em}
+.ticket-artwork{width:calc(100% + 60px);max-width:none;margin:-30px -30px 24px;height:190px;object-fit:cover}.demo-ticket-label{position:relative;z-index:1;background:#795638;color:#fff6db;padding:8px;font-size:11px;letter-spacing:.08em;margin:-30px -30px 30px}.demo-ticket-label+.ticket-artwork{margin-top:-30px}.booking-page .admission-ticket{background:radial-gradient(ellipse at top left,#fff8e6,#f0dfbf);border:double 5px #c8aa70;outline:1px solid #f1deb1;outline-offset:3px}.booking-page .ticket-middle .totals>div:last-child{color:#63432b;font-size:27px}.booking-page .checkout-layout>div{background:#101111e8;border:1px solid #ae96653d;border-radius:12px;padding:28px}.booking-page .payment-method{background:linear-gradient(110deg,#281d1c,#101111);border-color:#ac8a5452}.booking-page .payment-method:has(:checked){border-color:#e0b878}.booking-page #pay{width:100%;background:linear-gradient(100deg,#795638,#49311f);color:#fff0d4;border-color:#be8e52}
+@media print{body{background:#fff!important}.site-header,.booking-cover,.booking-progress,#booking-programme-details,#booking-notice,.demo-banner,.mobile-booking-bar,.ticket-actions,dialog,[data-screen]:not([data-screen="success"]){display:none!important}.booking-container{width:100%!important;padding:0!important}.issued-tickets{display:block}.admission-ticket{break-inside:avoid;max-width:400px;margin:20px auto;print-color-adjust:exact;-webkit-print-color-adjust:exact}.success-state>p,.success-state>.result-icon,.success-state>h2{display:none}}
+.booking-page{background:radial-gradient(ellipse at 12% 25%,#64472e2e,transparent 55%),#100f0e}
+.booking-page .booking-container{width:min(1440px,94%);padding-top:16px}
+.booking-page #booking-programme-details{margin-bottom:14px;font-size:13px}
+.booking-page:has([data-screen="buyer"]:not([hidden])) #booking-programme-details,
+.booking-page:has([data-screen="buyer"]:not([hidden])) .booking-cover{display:none}
+.booking-cover{position:relative;min-height:280px;overflow:hidden;border:1px solid #bea36b38;border-radius:12px;background:#231d16;margin-bottom:0;isolation:isolate}
+.booking-cover>img{position:absolute;right:0;top:0;width:67%;height:100%;object-fit:contain;object-position:right center;background:#d6c9af;z-index:-2}
+.booking-cover:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#15110e 0%,#21170fee 29%,#291b10aa 41%,transparent 60%);z-index:-1;pointer-events:none}
+.booking-cover-copy{padding:36px;width:44%}
+.booking-cover h1{font-size:clamp(32px,3.8vw,56px);line-height:1.1;color:#f6e3b5;text-shadow:0 2px 16px #0007}
+.booking-cover .eyebrow{display:inline-block;border:1px solid #aa6d5159;background:#5b412c4d;border-radius:3px;padding:4px 9px;font-size:11px;letter-spacing:.13em;color:#ebc2a0}
+.booking-cover #performance-label{font-size:14px;color:#d6c7af;max-width:330px;margin:14px 0 0}
+.booking-page .notice{font-size:13px;margin:12px 0;padding:9px 14px;background:#bca16b0c;color:#c9bfae;border-left-width:2px}
+.booking-page [data-screen="dates"]{padding:30px 0}
+.booking-page [data-screen="dates"]>h2{font-size:26px}
+.booking-session-strip{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:18px 22px;margin:12px 0 20px;border:1px solid #bea36b38;border-radius:9px;background:linear-gradient(120deg,#24211b,#151615)}
+.booking-session-strip>div:first-child{flex-shrink:0}.booking-session-strip h3{font-size:22px;margin:0 0 4px}.booking-session-strip p{font-size:12px;color:var(--muted);margin:0}
+.booking-session-strip .performance-list{margin:0;gap:12px;flex-wrap:nowrap}
+.booking-session-strip .performance-card{min-width:200px;padding:12px 26px;gap:3px;text-align:center;place-items:center;border-radius:7px;background:linear-gradient(#222425,#141616)}
+.booking-session-strip .performance-card small{font-size:12px}.booking-session-strip .performance-card strong{font-size:19px}.booking-session-strip .performance-card>small:last-child{display:none}
+.booking-session-strip .performance-card[aria-pressed=true]{border-color:#d4b561;box-shadow:inset 0 0 20px #dab3510d,0 0 10px #b68e3829;background:linear-gradient(#382f1e,#1c1912)}
+.booking-page .seat-layout{grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:start}
+.booking-map-panel{display:flex;flex-direction:column;min-width:0;padding:16px;border:1px solid #867d603d;border-radius:10px;background:radial-gradient(ellipse at 50% 0%,#e0bd6521,transparent 40%),#141617;box-shadow:0 12px 50px #0003}
+.booking-map-panel>h2{font-size:20px;margin:0 0 12px;color:#e4d3ae}
+.booking-page .seat-tools{order:1;margin:0 0 10px;gap:10px}
+.booking-page .map-hint{order:2;font-size:11px;margin:0 0 8px}
+.booking-page .seat-viewport{order:3;border:0;background:transparent;border-radius:0;box-shadow:none;height:600px}
+.booking-page .seat-detail{order:4;min-height:24px;font-size:12px;margin:10px 0;color:#e1c480}
+.booking-page .category-list{order:5;border-top:1px solid #93836042;padding-top:14px;margin:0;gap:10px}
+.booking-page .category-chip{border:0;background:none;padding:4px;flex-direction:column;position:relative;padding-left:20px;align-items:flex-start;font-size:10px;gap:2px}
+.booking-page .category-chip:before{position:absolute;left:0;top:7px;width:13px;height:17px;border-radius:5px;box-shadow:inset 0 3px 3px #fff3}
+.booking-page .category-chip small{font-size:10px;color:#ccc3b5}.booking-page .category-chip[aria-pressed=true]{outline:1px solid var(--category);outline-offset:2px}
+.booking-page .seat-legend{order:6;padding:12px 0 0;margin:0;font-size:11px}
+.booking-page .floor-list button,.booking-page .zoom-controls button{padding:5px 9px;min-height:32px;font-size:11px}.booking-page .zoom-controls output{font-size:11px}
+.booking-page .seat-summary-stack{top:16px;gap:12px}.booking-page .seat-summary{background:linear-gradient(125deg,#1e2020,#0e1010);border-color:#9b8a6547;padding:22px 18px;border-radius:10px}
+.booking-page .summary-heading h2{font-size:24px;color:#f3ead9}.booking-page .clear-seats{font-size:11px;color:#d58975}
+.booking-page .seat-summary>.clear-seats{float:right;margin:0 0 12px 12px}.booking-page .seat-summary>h2{font-size:24px}.booking-page .seat-summary{position:sticky;top:16px}
+.booking-page .selected-seats li:has(.remove-seat){background:linear-gradient(110deg,#29292977,#121515);border-color:#6d70603d;padding:16px 25px 16px 12px;font-size:13px}
+.booking-page .totals>div:last-child{font-family:var(--heading);font-size:23px;color:#edcc76}.booking-page .totals>div{font-size:13px}
+.booking-page .seat-summary>.primary{min-height:50px;background:linear-gradient(110deg,#fbe6a5,#dfb762,#ba893d);border:0;font-family:var(--heading);font-size:17px}
+.booking-page .booking-important{background:#151818;border-color:#8c806338;padding:18px}.booking-page .booking-important h3{font-size:16px;margin-bottom:10px}.booking-page .booking-important ul{font-size:12px}
+@media(min-width:1600px){.booking-page .seat-viewport{height:650px}}
+@media(max-width:1100px){.booking-cover-copy{padding:26px}.booking-page .seat-layout{grid-template-columns:minmax(0,1fr) 290px;gap:14px}.booking-map-panel{padding:12px}.booking-session-strip .performance-card{min-width:175px}.booking-session-strip{padding:16px}.booking-cover{min-height:235px}.booking-page .seat-viewport{height:550px}}
+@media(max-width:760px){.booking-page .booking-container{width:calc(100% - 24px);padding-top:12px}.booking-cover{display:flex;flex-direction:column;min-height:0}.booking-cover>img{position:static;width:100%;height:auto;aspect-ratio:2019/760;object-fit:contain;order:0;z-index:0}.booking-cover:after{display:none}.booking-cover-copy{width:100%;padding:20px;order:1}.booking-cover h1{font-size:34px}.booking-cover .eyebrow{font-size:10px}.booking-cover #performance-label{max-width:none}.booking-session-strip{align-items:stretch;flex-direction:column;gap:12px;padding:14px}.booking-session-strip h3{font-size:20px}.booking-session-strip .performance-list{width:100%;gap:8px}.booking-session-strip .performance-card{min-width:0;flex:1;padding:12px}.booking-session-strip .performance-card strong{font-size:17px}.booking-page .seat-layout{grid-template-columns:minmax(0,1fr)}.booking-map-panel{padding:12px 8px}.booking-page .seat-tools{gap:8px}.booking-page .seat-viewport{height:510px}.booking-page .category-list{gap:12px}.booking-page .seat-summary-stack{position:static}}
+/* Preserve the original auditorium layout; only change seat shape. */
+.booking-page .seat{border-radius:3px;padding:0;line-height:1}
+
+/* Programme and performance selection share one compact heading row. */
+.booking-page .booking-cover{display:flex;flex-direction:row;align-items:center;gap:20px;min-height:0;padding:18px 22px;margin-bottom:18px;background:#211d17}
+.booking-page .booking-cover:after{display:none}
+.booking-page .booking-cover>img{position:static;order:-1;flex:0 0 100px;width:100px;height:76px;aspect-ratio:auto;object-fit:cover;border-radius:6px;z-index:auto}
+.booking-page .booking-cover-copy{width:auto;min-width:0;padding:0;flex:1}
+.booking-page .booking-cover .eyebrow{display:none}
+.booking-page .booking-cover h1{font-size:clamp(24px,2.4vw,34px);margin:0}
+.booking-page .booking-cover #performance-label{margin-top:8px;max-width:none;font-size:12px}
+.booking-page .booking-cover .booking-session-strip{display:none;margin:0;padding:0;border:0;background:none;min-width:0}
+.booking-page:has([data-screen="seats"]:not([hidden])) .booking-cover .booking-session-strip{display:flex}
+.booking-page .booking-cover .booking-session-strip>div:first-child{display:none}
+.booking-page .booking-cover .performance-card{min-width:165px;padding:12px 16px}
+@media(max-width:1000px){.booking-page .booking-cover{gap:14px;padding:16px}.booking-page .booking-cover>img{display:none}.booking-page .booking-cover .performance-card{min-width:140px;padding:10px}}
+@media(max-width:600px){.booking-page .booking-cover{flex-wrap:wrap}.booking-page .booking-cover-copy{flex-basis:100%}.booking-page .booking-cover .booking-session-strip{width:100%}.booking-page .booking-cover .performance-list{width:100%}.booking-page .booking-cover .performance-card{min-width:0;flex:1}}
+
+/* Reference layout: programme and auditorium left, order panel right. */
+.booking-page #booking-empty{grid-column:1;grid-row:4}
+.booking-page:has([data-screen="seats"]:not([hidden])){background:linear-gradient(90deg,#100b07a6,#080806f2 24%,#080806f5 76%,#100b07bb),url('assets/theatre/hall-background.webp') center/cover fixed}
+.booking-page:has([data-screen="seats"]:not([hidden])) .booking-container{display:grid;grid-template-columns:minmax(0,1fr) 340px;column-gap:28px;row-gap:12px;align-items:start;width:min(1440px,94%)}
+.booking-page:has([data-screen="seats"]:not([hidden])) #demo-info{grid-column:1/-1;grid-row:1;margin:0}
+.booking-page:has([data-screen="seats"]:not([hidden])) #booking-programme-details{grid-column:1;grid-row:2;margin:0}
+.booking-page:has([data-screen="seats"]:not([hidden])) .booking-cover{grid-column:1;grid-row:3;border:0;background:transparent;padding:0 0 14px;margin:0;border-radius:0;gap:18px}
+.booking-page:has([data-screen="seats"]:not([hidden])) #booking-notice{grid-column:1;grid-row:4;margin:0}
+.booking-page [data-screen="seats"]:not([hidden]),.booking-page [data-screen="seats"]:not([hidden])>.seat-layout{display:contents}
+.booking-page [data-screen="seats"]>.back-link{display:none}
+.booking-page:has([data-screen="seats"]:not([hidden])) .booking-map-panel{grid-column:1;grid-row:5;padding:14px 10px 10px;border:0;border-radius:0;background:transparent;box-shadow:none}
+.booking-page:has([data-screen="seats"]:not([hidden])) .seat-summary{grid-column:2;grid-row:2/6;position:sticky;top:100px;padding:22px 18px;background:linear-gradient(135deg,#19150fec,#090908f5);border:1px solid #977339;border-radius:10px;box-shadow:inset 0 0 0 4px #15120d,inset 0 0 0 5px #b4924438,0 15px 40px #0006}
+.booking-page .booking-cover>img{display:block;width:108px;height:116px;flex:0 0 108px;border:1px solid #a9844659;border-radius:3px;object-fit:cover}
+.booking-page .booking-cover h1{font-size:clamp(26px,2.7vw,40px);font-weight:400;color:#f4ebd6}
+.booking-page .booking-cover #performance-label{font-size:12px;line-height:1.7}
+.booking-page .booking-cover .performance-list{gap:10px}
+.booking-page .booking-cover .performance-card{min-width:115px;padding:12px 13px;place-items:start;text-align:left;background:#100e0b;border-color:#82673766}
+.booking-page .booking-cover .performance-card strong{font-size:16px}
+.booking-page .booking-cover .performance-card[aria-pressed=true]{background:linear-gradient(130deg,#795638,#392719);border-color:#e1b760;box-shadow:inset 0 0 12px #d9a34935,0 1px 9px #e3ad4420}
+.booking-page .seat-summary>h2{color:#e9d393;font-size:23px;padding-bottom:14px;margin-bottom:12px;border-bottom:1px solid #a484414d}
+.booking-page .seat-summary .hold-label{padding:8px 10px;margin:0 0 14px;border:0;border-bottom:1px solid #a484414d;border-radius:0;background:none;text-align:right;font-size:11px}
+.booking-page .seat-summary .hold-label strong{display:inline-block;margin:0 0 0 10px;font-size:25px}
+.booking-page .selected-seats li:has(.remove-seat){padding:12px 25px 12px 10px;border-radius:4px;background:#0a090780;border-color:#a4844130;font-size:12px}
+
+
+
+
+.booking-page .seat-summary>.primary{width:100%;background:linear-gradient(125deg,#795638,#402b1c);border:1px solid #e4bc65;box-shadow:inset 0 0 12px #e6ac4225;color:#f4dfaa;border-radius:8px;font-size:17px}
+.booking-page .seat-summary>.primary:disabled{opacity:.45}
+@media(min-width:1101px){.booking-page .booking-map-panel .seat-viewport{height:610px}}
+@media(max-width:1100px) and (min-width:761px){.booking-page:has([data-screen="seats"]:not([hidden])) .booking-container{grid-template-columns:minmax(0,1fr) 300px;column-gap:16px}.booking-page .booking-cover{flex-wrap:wrap}.booking-page .booking-cover .booking-session-strip{width:100%}.booking-page .booking-cover .performance-list{width:100%}.booking-page .booking-cover .performance-card{flex:1}}
+@media(max-width:760px){.booking-page:has([data-screen="seats"]:not([hidden])) .booking-container{display:block;width:calc(100% - 24px)}.booking-page:has([data-screen="seats"]:not([hidden])) .booking-cover{margin-top:12px;flex-wrap:wrap}.booking-page .booking-cover>img{width:76px;height:90px;flex-basis:76px;order:-1}.booking-page .booking-cover-copy{flex:1;order:0}.booking-page .booking-cover .booking-session-strip{order:1;width:100%}.booking-page .booking-cover .performance-card{flex:1}.booking-page:has([data-screen="seats"]:not([hidden])) .seat-summary{position:static;margin-top:18px}.booking-page:has([data-screen="seats"]:not([hidden])){background-attachment:scroll}}
+
+/* Show prices above the complete auditorium, without floor or pan controls. */
+.booking-page .category-list{order:0;border-top:0;border-bottom:1px solid #93836042;padding:0 0 16px;margin:0 0 16px;gap:14px 20px}
+.booking-page .category-chip{font-size:12px;min-height:40px;padding-left:24px}
+.booking-page .category-chip small{font-size:13px}
+.booking-page .booking-map-panel .seat-viewport{cursor:default;touch-action:auto;flex:none}
+
+.booking-page .booking-cover .booking-auditorium{margin:4px 0 0;font-size:13px;line-height:1.7;color:#d6c7af}
+.demo-gateway{max-width:680px;margin:24px auto;padding:28px;border:1px solid #795638;border-radius:12px;background:#191510;color:#eadbc0}
+.demo-gateway h2{font-size:28px;color:#efdfb7}.demo-gateway .eyebrow{color:#d9b56c}
+.demo-gateway select,.demo-gateway input,#demo-scenarios select{display:block;width:100%;box-sizing:border-box;min-height:48px;padding:12px;margin:10px 0 20px;background:#100e0b;color:#f0e3cb;border:1px solid #795638;border-radius:6px;font-size:16px}
+.demo-gateway-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.demo-gateway .primary{background:#795638;color:#fff0d4}
+.demo-amount{font-size:30px;color:#e9d393}#demo-order,#success-order{overflow-wrap:anywhere}
+#demo-qr-panel{text-align:center}#demo-payment-qr{display:block;margin:16px auto;background:white;padding:8px}
+#demo-qr-panel p{font-size:12px;color:#d9b56c}#demo-scenarios{margin:18px 0}
+
+/* Buyer and payment share one dark checkout surface. */
+.booking-page .combined-checkout{grid-template-columns:minmax(0,1.65fr) minmax(300px,1fr);gap:28px}
+.combined-checkout #buyer-form{display:grid;gap:18px;min-width:0}
+.combined-checkout .checkout-card{padding:24px;background:linear-gradient(135deg,#201c17,#111110);border:1px solid #a484414d;border-radius:10px;box-shadow:0 8px 24px #0003}
+.combined-checkout .checkout-card h2{font-family:var(--heading);font-size:22px;line-height:1.4;color:#efdfb7;margin:0 0 22px}
+.combined-checkout .buyer-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.combined-checkout .buyer-fields label{font-size:14px;color:#e7dcc9;min-width:0}
+.combined-checkout .buyer-fields input{box-sizing:border-box;background:#111110;border-color:#75624380;font-size:14px;min-width:0}
+.combined-checkout input:focus-visible{outline:2px solid #d7b76e;outline-offset:3px}
+.combined-checkout .hold-label{font-size:14px;margin:18px 0 0;color:#bdb09a}
+.combined-checkout .payment-methods{grid-template-columns:repeat(3,minmax(0,1fr));margin:0;gap:12px}
+.booking-page .combined-checkout .payment-method{position:relative;display:flex;flex-direction:column;justify-content:flex-start;gap:10px;text-align:center;padding:22px 12px 18px;min-width:0;background:#151412;border:1px solid #74644880;border-radius:7px;cursor:pointer}
+.booking-page .combined-checkout .payment-method:has(:checked){background:linear-gradient(145deg,#3a2d20,#241c14);border-color:#d9b56c;box-shadow:inset 0 0 0 1px #d9b56c33}
+.combined-checkout .payment-method input[type=radio]{position:absolute;top:12px;left:12px;width:16px;height:16px;min-height:0;margin:0;padding:0;accent-color:#d9b56c}
+.payment-method-icon{font-size:28px;line-height:1.2;color:#dfc388}
+.combined-checkout .payment-method strong{font-size:14px;color:#ebdfc7;line-height:1.5}
+.combined-checkout .payment-method small{font-size:12px;line-height:1.6;color:#bbae99}
+.combined-checkout .muted{font-size:14px;line-height:1.7}
+.combined-checkout #pay{width:100%;min-height:52px;margin-top:8px}
+@media(max-width:1100px){.combined-checkout .buyer-fields{grid-template-columns:1fr}.booking-page .combined-checkout{gap:20px}.combined-checkout .checkout-card{padding:20px}.combined-checkout .payment-methods{grid-template-columns:1fr}}
+@media(max-width:760px){.booking-page .combined-checkout{grid-template-columns:minmax(0,1fr)}.combined-checkout .checkout-card{padding:20px 16px}.combined-checkout .checkout-card h2{font-size:20px}.combined-checkout .buyer-fields input{font-size:16px}}

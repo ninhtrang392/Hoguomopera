@@ -1,0 +1,412 @@
+.overture {
+    position: relative;
+    background: #051b39;
+    color: #fff5db;
+    isolation: isolate
+}
+
+.overture-stage {
+    position: relative;
+    height: 100svh;
+    min-height: 640px;
+    overflow: hidden;
+    background: #051b39
+}
+
+.overture-art,
+.overture-sky,
+.overture-dim,
+.overture-shade,
+.overture-birds {
+    position: absolute;
+    inset: 0;
+    pointer-events: none
+}
+
+.overture-art {
+    overflow: hidden;
+    transform-origin: 50% 70%
+}
+
+.overture-sky {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .55
+}
+
+.overture-drum {
+    position: absolute;
+    width: 65%;
+    left: -25%;
+    top: 3%;
+    opacity: .18
+}
+
+.overture-theatre {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    max-width: none;
+    bottom: -17%;
+    left: 0
+}
+
+.overture-dim {
+    z-index: 3;
+    background: #02142d;
+    opacity: 0
+}
+
+.overture-birds {
+    z-index: 4;
+    inset: 10% 10% auto auto;
+    width: 38%;
+    height: 32%
+}
+
+.overture-birds canvas {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+@media(min-width:761px) {
+    .overture-birds canvas {
+        transform: translate(-19vw, -24svh) scale(1.15)
+    }
+}
+
+.overture-fallback {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: .75
+}
+
+.overture-shade {
+    z-index: 5;
+    background: linear-gradient(0deg, #051b39 0%, #051b39a6 20%, transparent 52%)
+}
+
+.overture-skip {
+    position: absolute;
+    z-index: 7;
+    right: 4%;
+    top: 125px;
+    padding: 12px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #fff5db55
+}
+
+.overture-copy {
+    position: absolute;
+    z-index: 6;
+    left: 6%;
+    bottom: 9%;
+    right: 6%
+}
+
+.overture-copy p {
+    font-size: 14px;
+    letter-spacing: .24em;
+    margin: 0 0 16px;
+    color: #ebd3a0
+}
+
+.overture-copy h2 {
+    font-size: clamp(34px, 4.4vw, 78px);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    margin: 0 0 28px
+}
+
+.overture-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap
+}
+
+.overture-enter {
+    display: inline-flex;
+    align-items: center;
+    gap: 36px;
+    border: 1px solid #fff5db80;
+    border-radius: 40px;
+    padding: 15px 24px;
+    font-size: 14px
+}
+
+.overture-enter:hover {
+    background: #fff5db;
+    color: #051b39
+}
+
+.overture-programs {
+    font-size: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #fff5db55
+}
+
+.overture a:focus-visible {
+    outline: 2px solid #fff5db;
+    outline-offset: 5px
+}
+
+.overture-caption {
+    position: absolute;
+    z-index: 6;
+    right: 4%;
+    bottom: 10%;
+    writing-mode: vertical-rl;
+    font-size: 12px;
+    letter-spacing: .2em;
+    color: #ebd3a0
+}
+
+#main-hero {
+    scroll-margin-top: 0
+}
+
+@media(max-width:760px) {
+    .overture-stage {
+        min-height: 680px
+    }
+    .overture-theatre {
+        width: 140%;
+        left: -24%;
+        bottom: 12%
+    }
+    .overture-drum {
+        width: 130%;
+        left: -75%;
+        top: 18%
+    }
+    .overture-birds {
+        top: 17%;
+        right: 8%;
+        width: 65%;
+        height: 22%
+    }
+    .overture-copy {
+        bottom: 7%
+    }
+    .overture-copy p {
+        font-size: 12px;
+        letter-spacing: .16em
+    }
+    .overture-copy h2 {
+        max-width: 300px
+    }
+    .overture-links {
+        gap: 16px
+    }
+    .overture-caption {
+        display: none
+    }
+    .overture-skip {
+        top: 100px;
+        right: 6%
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .overture * {
+        scroll-behavior: auto!important
+    }
+}
+
+
+/* Use the gold artwork only as the particle mask; display two white cranes. */
+
+.overture-fallback {
+    opacity: 0
+}
+
+.overture-birds canvas.overture-companion {
+    position: absolute;
+    top: 100%;
+    left: -12vw;
+    margin-top: -6svh;
+    transform: translateX(-3vw) scale(.805)
+}
+
+@media(min-width:761px) {
+    .overture-birds canvas.overture-companion {
+        transform: translate(-19vw, -24svh) scale(.805)
+    }
+}
+
+@media(max-width:760px) {
+    .overture-birds canvas.overture-companion {
+        left: -15vw;
+        margin-top: -4svh
+    }
+}
+
+@media(max-width:760px) {
+    .overture-birds canvas:not(.overture-companion) {
+        transform: translateX(-3vw) scale(1.15)
+    }
+}
+
+
+/* Reference composition: editorial copy left, golden crane above the roof. */
+
+.overture-copy {
+    left: 6%;
+    right: auto;
+    top: 39%;
+    bottom: auto;
+    width: 40%;
+    max-width: 790px
+}
+
+.overture-copy>p {
+    text-align: left;
+    font-size: clamp(11px, .95vw, 18px);
+    letter-spacing: .34em;
+    margin-bottom: 18px
+}
+
+.overture-copy h2 {
+    font-family: Lora, Georgia, 'Times New Roman', serif;
+    font-size: clamp(58px, 4vw, 120px);
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin-bottom: 30px
+}
+
+.overture .overture-birds canvas.overture-flight {
+    opacity: .85;
+    inset: -100% auto auto -100%;
+    width: 300%;
+    height: 300%;
+}
+
+.overture-copy h2 .overture-slogan {
+    display: block;
+    width: 85%;
+    /* Align the N's main stroke with the eyebrow, beyond the left flourish. */
+    margin-left: -10%;
+    height: auto;
+    aspect-ratio: 1456 / 600;
+    object-fit: cover;
+    object-position: center 58%;
+}
+
+.overture-copy h2>span,
+.overture-copy h2>em {
+    display: block;
+    white-space: nowrap
+}
+
+.overture-copy h2>em {
+    font-size: 1.16em;
+    font-style: normal;
+    font-weight: 400;
+    color: #efd18b
+}
+
+.overture-links {
+    gap: 20px;
+    flex-wrap: nowrap;
+    font-size: clamp(9px, .74vw, 14px);
+    letter-spacing: .28em;
+    line-height: 1.6;
+    color: #eee7db
+}
+
+.overture-links:before {
+    content: '';
+    width: 46px;
+    height: 1px;
+    background: #ddc38e;
+    flex-shrink: 0
+}
+
+.overture-skip,
+.overture-caption {
+    display: none
+}
+
+.overture-birds {
+    inset: 13% auto auto 36%;
+    width: 34%;
+    height: 32%
+}
+
+.overture-birds canvas:not(.overture-companion) {
+    position: absolute;
+    inset: 0;
+    transform: scale(1.15)
+}
+
+.overture-birds canvas.overture-companion {
+    top: 20%;
+    left: -35%;
+    margin: 0;
+    transform: scale(.6);
+    filter: grayscale(1);
+    opacity: .55
+}
+
+.overture-fallback {
+    opacity: 1;
+    filter: grayscale(1)
+}
+
+.overture-fallback[hidden] {
+    display: none!important
+}
+
+.overture-shade {
+    background: linear-gradient(0deg, #051b3944, transparent 30%), linear-gradient(90deg, #03122655, transparent 58%)
+}
+
+@media(max-width:760px) {
+    .overture-copy {
+        top: auto;
+        bottom: 12%;
+        left: 6%;
+        width: 88%;
+        max-width: none
+    }
+    .overture-copy>p {
+        text-align: left;
+        font-size: 10px;
+        letter-spacing: .22em
+    }
+    .overture-copy h2 {
+        font-size: clamp(42px, 10.5vw, 76px);
+        max-width: none;
+        margin-bottom: 22px
+    }
+    .overture-links {
+        font-size: 9px;
+        letter-spacing: .15em;
+        gap: 12px;
+        max-width: 360px
+    }
+    .overture-links:before {
+        width: 25px
+    }
+    .overture-birds {
+        top: 19%;
+        left: 32%;
+        right: auto;
+        width: 60%;
+        height: 24%
+    }
+    .overture-birds canvas:not(.overture-companion) {
+        transform: scale(1.25)
+    }
+    .overture-birds canvas.overture-companion {
+        top: 22%;
+        left: -35%;
+        margin: 0;
+        transform: scale(.6)
+    }
+}

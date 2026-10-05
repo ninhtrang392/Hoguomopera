@@ -1,0 +1,10 @@
+/* Font families and hierarchy from D:/BT-03. */
+@font-face{font-family:LocalSerif;src:url('assets/fonts/serif.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Montserrat;src:url('assets/fonts/montserrat-400.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Montserrat;src:url('assets/fonts/montserrat-500.woff2') format('woff2');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:Montserrat;src:url('assets/fonts/montserrat-600.woff2') format('woff2');font-style:normal;font-weight:600;font-display:swap}
+:root{--serif:LocalSerif,Georgia,'Times New Roman',serif;--sans:'Be Vietnam Pro','Helvetica Neue',Arial,sans-serif;--heading:Lora,Georgia,'Times New Roman',serif;--font:var(--sans)}
+body,button,input,textarea,select{font-family:var(--sans)}
+h1,h2,h3,h4,h5,h6,.hero-architecture h1{font-family:var(--heading);font-weight:400}
+.footer-brand>span{font-family:var(--serif);font-weight:400}
+.programs .collection-heading h2,.programs .collection-info h3{font-family:var(--heading);font-weight:400}

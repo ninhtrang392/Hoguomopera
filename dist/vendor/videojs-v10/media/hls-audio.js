@@ -1,0 +1,3 @@
+/*! Video.js | https://videojs.org/about-this-player */
+import{t as e}from"../custom-media-element-C0oZE2b2.js";import{t}from"../safe-define-BnsQT9yb.js";import{t as n}from"../media-attach-mixin-C-EP-GIe.js";import{t as r}from"../adapter-j2opp11W.js";var i=class extends n(e(`audio`,r)){},a=class extends i{static{this.tagName=`hls-audio`}};t(a);export{a as HlsAudioElement};
+//# sourceMappingURL=hls-audio.js.map

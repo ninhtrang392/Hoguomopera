@@ -1,0 +1,1 @@
+{"version":3,"file":"zh-DbIIZEHE.js","names":[],"sources":["../core/dist/default/i18n/locales/zh.js"],"sourcesContent":["import zh_CN_default from \"./zh-CN.js\";\nexport { zh_CN_default as default };\n"],"mappings":""}

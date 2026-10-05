@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17130e">
+  <meta name="description" content="Thư viện số Hồ Gươm Opera — khám phá hình ảnh, video, nghệ sĩ và không gian nhà hát.">
+  <title>Thư viện số — Hồ Gươm Opera</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="be-vietnam-pro.css">
+    <link rel="stylesheet" href="lora.css">
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="library.css">
+    <script src="site-header.js" defer></script>
+    <script src="library.js" defer></script>
+    <link rel="stylesheet" href="site-header.css">
+</head>
+<body>
+  <a class="skip" href="#library">Đến thư viện</a>
+  <svg class="icons" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 6-6 4 4 3-3 5 5"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/></symbol>
+    <symbol id="expand" viewBox="0 0 24 24"><path d="M14 3h7v7M21 3l-7 7M10 21H3v-7m0 7 7-7"/></symbol>
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21S2 14 2 7.5C2 2 9 1 12 6c3-5 10-4 10 1.5C22 14 12 21 12 21Z"/></symbol>
+    <symbol id="share" viewBox="0 0 24 24"><circle cx="18" cy="4" r="3"/><circle cx="5" cy="12" r="3"/><circle cx="18" cy="20" r="3"/><path d="m8 10 7-4M8 14l7 4"/></symbol>
+    <symbol id="filter" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="18" r="2"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+  </defs></svg>
+  <header data-site-header data-page="library"></header>
+  <main id="library">
+    <div class="library-heading"><h1>THƯ VIỆN SỐ</h1><p>Lưu giữ khoảnh khắc – Lan tỏa giá trị nghệ thuật</p></div>
+    <div class="library-toolbar">
+      <div class="media-tabs" role="group" aria-label="Loại tư liệu"><button data-type="photo" aria-pressed="true"><svg><use href="#photo"/></svg>Thư viện ảnh</button><button data-type="video" aria-pressed="false"><svg><use href="#play"/></svg>Thư viện video</button></div>
+      <div class="search-tools"><label class="search-box"><svg><use href="#search"/></svg><input id="query" type="search" placeholder="Tìm kiếm hình ảnh, sự kiện, nghệ sĩ…" aria-label="Tìm kiếm thư viện"></label><button class="filter-toggle" aria-expanded="false" aria-controls="filter-panel"><svg><use href="#filter"/></svg>Bộ lọc <span>⌄</span></button>
+        <div id="filter-panel" hidden><label><input type="checkbox" id="favorites-only"> Chỉ hiện mục yêu thích</label><button id="reset">Xóa bộ lọc</button></div>
+      </div>
+    </div>
+    <section class="exhibition" aria-label="Bộ sưu tập đang xem">
+      <article class="collection-info"><p class="collection-category">BIỂU DIỄN</p><h2 id="collection-title">Vũ điệu ballet</h2><p class="collection-description">Những chuyển động thanh thoát và cảm xúc được kể bằng ngôn ngữ múa.</p><dl><div><dt>Địa điểm</dt><dd>Nhà hát Hồ Gươm</dd></div><div><dt>Bộ sưu tập</dt><dd id="collection-group">Biểu diễn</dd></div><div><dt>Tư liệu</dt><dd id="collection-count">1 hình ảnh</dd></div></dl></article>
+      <div class="exhibit-art"><button class="art-frame" id="open-art" aria-label="Xem ảnh lớn"><img id="featured-image" src="assets/ballet.webp" alt="Vũ điệu ballet" fetchpriority="high"><span class="video-badge" hidden><svg><use href="#play"/></svg></span></button><span class="exhibit-base" aria-hidden="true"></span></div>
+      <div class="exhibit-actions"><button id="expand-art" aria-label="Mở rộng ảnh"><svg><use href="#expand"/></svg></button><button id="play-art" aria-label="Trình chiếu ảnh" aria-pressed="false"><svg><use href="#play"/></svg></button><button id="share-art" aria-label="Sao chép liên kết bộ sưu tập"><svg><use href="#share"/></svg></button><button id="favorite-art" aria-label="Yêu thích bộ sưu tập" aria-pressed="false"><svg><use href="#heart"/></svg></button></div>
+    </section>
+    <p class="empty-message" hidden>Chưa có tư liệu phù hợp. Hãy thử từ khóa hoặc danh mục khác.</p>
+    <section class="collection-shelf" aria-label="Danh sách bộ sưu tập">
+      <div class="shelf-toolbar"><div class="categories" role="group" aria-label="Danh mục"><button data-category="all" aria-pressed="true">Tất cả</button><button data-category="Biểu diễn" aria-pressed="false">Biểu diễn</button><button data-category="Hậu trường" aria-pressed="false">Hậu trường</button><button data-category="Kiến trúc" aria-pressed="false">Kiến trúc</button><button data-category="Sự kiện" aria-pressed="false">Sự kiện</button><button data-category="Nghệ sĩ" aria-pressed="false">Nghệ sĩ</button><button data-category="Cộng đồng" aria-pressed="false">Cộng đồng</button></div><select id="sort" aria-label="Sắp xếp bộ sưu tập"><option value="default">Nổi bật</option><option value="az">Tên A–Z</option><option value="za">Tên Z–A</option></select></div>
+      <div class="shelf-row"><button class="shelf-arrow previous" aria-label="Cuộn danh sách sang trái"><svg><use href="#arrow"/></svg></button><div id="collection-list" class="collection-list" tabindex="0" aria-label="Chọn bộ sưu tập"></div><button class="shelf-arrow next" aria-label="Cuộn danh sách sang phải"><svg><use href="#arrow"/></svg></button></div>
+      <p class="shelf-note">HỒ GƯƠM OPERA <span>·</span> KHOẢNH KHẮC TRỞ THÀNH DI SẢN</p>
+    </section>
+  </main>
+  <p id="status" role="status" class="toast"></p>
+  <dialog id="viewer" aria-labelledby="viewer-title"><div class="viewer-header"><h2 id="viewer-title"></h2><button id="close-viewer" aria-label="Đóng trình xem"><svg><use href="#close"/></svg></button></div><div class="viewer-media"><img id="viewer-image" alt=""><video id="viewer-video" controls playsinline hidden></video></div><div class="viewer-footer"><button id="viewer-prev" aria-label="Ảnh trước">← Trước</button><span id="viewer-count"></span><button id="viewer-next" aria-label="Ảnh tiếp theo">Tiếp →</button></div></dialog>
+  <noscript><p class="noscript">Bật JavaScript để tìm kiếm và xem các bộ sưu tập. <a href="index.html">Về trang chủ</a></p></noscript>
+</body>
+</html>

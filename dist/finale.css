@@ -1,0 +1,42 @@
+.finale-shell{position:relative;background:#100e0a;color:#f2e6c4;isolation:isolate}
+.finale{position:relative;height:100svh;min-height:680px;overflow:hidden;background:#100e0a}
+.finale-visual{position:absolute;inset:0;overflow:hidden;transform-origin:50% 32%;background:#100e0a}
+.finale-background,.finale-artist{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.finale-dim,.finale-shade{position:absolute;inset:0;pointer-events:none}
+.finale-dim{background:#080604;opacity:.65}
+.finale-shade{background:linear-gradient(180deg,#100e0a70,transparent 35%,#100e0a33 65%,#100e0ac9),linear-gradient(90deg,#100e0ace,transparent 68%)}
+.finale-curtain{position:absolute;top:0;bottom:0;width:50.2%;z-index:4;background:#38030b;pointer-events:none;display:none}
+.finale-curtain.is-left{left:0;transform:translateX(-101%)}
+.finale-curtain.is-right{right:0;transform:translateX(101%)}
+.finale-curtain img{width:100%;height:100%;object-fit:fill}
+.finale-copy{position:absolute;z-index:3;left:6vw;top:50%;transform:translateY(-50%);width:43%;max-width:760px}
+.finale-kicker{font-size:11px;letter-spacing:.25em;color:#d5b971;margin:0 0 22px}
+.finale-copy h2{font:400 clamp(36px,4.3vw,76px)/1.14 var(--heading);letter-spacing:-.035em;margin:0 0 30px;color:#f6ecd6}
+.finale-line{display:block;overflow:hidden;padding-bottom:.13em;margin-bottom:-.13em}
+.finale-line>*{display:block}
+.finale-line em{font-style:normal;font-weight:400;color:#dfc18a}
+.finale-program-label{font-size:10px;letter-spacing:.17em;color:#c4b18d;margin:0 0 12px}
+.finale-program h3{font:400 clamp(24px,2vw,34px)/1.2 var(--heading);margin:0 0 10px}
+.finale-program-date{font-size:15px;letter-spacing:.08em;margin:0 0 10px}
+.finale-program-artists{font-size:13px;line-height:1.6;color:#d3c8b3;max-width:330px;margin:0 0 24px}
+.finale-cta{min-width:160px;border-radius:0}
+.finale-scroll{position:absolute;z-index:5;bottom:30px;right:4vw;font-size:10px;letter-spacing:.2em;color:#d8c39d;display:none;pointer-events:none}
+.finale-shell.is-motion{height:100svh;overflow:hidden}
+.finale-shell.is-motion .finale{height:100%;min-height:0}
+.finale-shell.is-motion .finale-curtain,.finale-shell.is-motion .finale-scroll{display:block}
+.finale-shell.is-motion .finale-visual,.finale-shell.is-motion .finale-background,.finale-shell.is-motion .finale-artist,.finale-shell.is-motion .finale-curtain{will-change:transform,opacity}
+.finale-shell.is-motion>.footer{position:absolute;z-index:6;bottom:0;left:0;width:100%;max-height:45svh;overflow:auto;overscroll-behavior:contain;will-change:transform;background:#100e0a;border-top:1px solid #d5b97140}
+@media(max-width:760px){
+ .finale{min-height:720px}
+ .finale-copy{left:7%;top:auto;bottom:9%;transform:none;width:86%;max-width:none}
+ .finale-copy h2{font-size:clamp(32px,8vw,48px);margin-bottom:18px}
+ .finale-background,.finale-artist{object-position:50% center}
+ .finale-shade{background:linear-gradient(180deg,#100e0a22,transparent 24%,#100e0a85 50%,#100e0aee 100%)}
+ .finale-kicker{font-size:9px;margin-bottom:12px}
+ .finale-program-label{font-size:9px}.finale-program h3{font-size:24px}
+ .finale-program-artists{margin-bottom:18px;font-size:12px}
+ .finale-scroll{font-size:8px;bottom:20px;right:7%}
+ .finale-shell.is-motion>.footer{max-height:34svh}
+}
+@media(max-height:700px) and (min-width:761px){.finale-copy h2{font-size:40px;margin-bottom:18px}.finale-kicker{margin-bottom:12px}.finale-program-artists{margin-bottom:16px}}
+@media(prefers-reduced-motion:reduce){.finale-cta{transition:none}.finale-visual,.finale-artist,.finale-background{will-change:auto}}

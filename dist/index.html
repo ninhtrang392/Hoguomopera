@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111212">
+    <meta name="description" content="Khám phá Hồ Gươm Opera — nơi những đêm giao hưởng, opera và ballet kết nối con người qua nghệ thuật.">
+    <title>Hồ Gươm Opera — Một đêm nghệ thuật đáng nhớ</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" as="image" href="assets/hero-architecture-mobile.webp" media="(max-width: 760px)" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/hero-architecture.webp" media="(min-width: 761px)" fetchpriority="high">
+    <link rel="stylesheet" href="be-vietnam-pro.css">
+    <link rel="stylesheet" href="lora.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="overture.css">
+    <link rel="stylesheet" href="programs.css">
+    <link rel="stylesheet" href="typography.css">
+    <link rel="stylesheet" href="vendor/videojs-v10/global.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="theatre.css">
+    <link rel="stylesheet" href="opera-journey.css">
+    <link rel="stylesheet" href="booking-guide.css">
+    <link rel="stylesheet" href="finale.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="home-layout.css">
+    <script src="site-header.js" defer></script>
+    <script type="module" src="media-videojs.js"></script>
+    <script src="media.js" defer></script>
+    <script type="module" src="theatre.js"></script>
+    <script src="vendor/gsap.min.js" defer></script>
+    <script src="vendor/ScrollTrigger.min.js" defer></script>
+    <script src="opera-journey.js" defer></script>
+    <script src="booking-guide.js" defer></script>
+    <script type="module" src="overture.js"></script>
+    <script src="programme-data.js" defer></script>
+    <script src="app.js" defer></script>
+    <script src="finale.js" defer></script>
+    <script src="footer.js" defer></script>
+    <script src="programs.js" defer></script>
+    <script src="header.js" defer></script>
+    <script src="hero.js" defer></script>
+    <link rel="stylesheet" href="site-header.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#programs" data-i18n="skip">Đến nội dung chính</a>
+
+    <!-- ==================================================
+         ICONS - REUSABLE SVG SYMBOLS
+    ================================================== -->
+    <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <symbol id="arrow" viewBox="0 0 24 24">
+          <path d="M4 12h15M13 5l7 7-7 7"/>
+        </symbol>
+        <symbol id="pin" viewBox="0 0 32 32">
+          <path d="M25 12c0 7-9 17-9 17S7 19 7 12a9 9 0 1 1 18 0Z"/>
+          <circle cx="16" cy="12" r="3.5"/>
+        </symbol>
+        <symbol id="ticket" viewBox="0 0 32 32">
+          <path d="m4 20 16-16 4 4a4 4 0 0 0 4 4l-16 16-4-4a4 4 0 0 0-4-4Z"/>
+          <path d="m15 9 2 2m2 2 2 2m2 2 2 2"/>
+        </symbol>
+        <symbol id="headphones" viewBox="0 0 32 32">
+          <path d="M5 18v-3a11 11 0 0 1 22 0v9c0 4-4 5-8 5"/>
+          <rect x="3" y="16" width="6" height="10" rx="2"/>
+          <rect x="23" y="16" width="6" height="10" rx="2"/>
+          <path d="M16 29h4"/>
+        </symbol>
+        <symbol id="close" viewBox="0 0 24 24">
+          <path d="m6 6 12 12M6 18 18 6"/>
+        </symbol>
+      </defs>
+    </svg>
+
+    <!-- ==================================================
+         HEADER - LOGO, MAIN NAVIGATION AND TOOLS
+    ================================================== -->
+    <header data-site-header data-page="home"></header>
+    <main>
+        <section class="overture" aria-labelledby="overture-title">
+            <div class="overture-stage">
+                <div class="overture-art" aria-hidden="true">
+                    <picture>
+                        <source media="(max-width: 760px)" srcset="assets/hero-sky-mobile.webp"><img class="overture-sky" src="assets/hero-sky.webp" alt="" fetchpriority="high"></picture>
+                    <picture>
+                        <source media="(max-width: 760px)" srcset="assets/hero-drum-mobile.webp"><img class="overture-drum" src="assets/hero-drum.webp" alt=""></picture>
+                    <picture>
+                        <source media="(max-width: 760px)" srcset="assets/hero-architecture-mobile.webp"><img fetchpriority="high" class="overture-theatre" src="assets/hero-architecture.webp" alt=""></picture>
+                    <div class="overture-dim"></div>
+                </div>
+                <div class="overture-birds" aria-hidden="true">
+                    <picture>
+                        <source media="(max-width: 760px)" srcset="assets/hero-cranes-mobile.webp"><img class="overture-fallback" src="assets/hero-cranes.webp" alt="" hidden></picture>
+                </div>
+                <div class="overture-shade" aria-hidden="true"></div>
+                <a class="overture-skip" href="#programs"><span data-overture-i18n="skip">Bỏ qua mở màn</span> ↗</a>
+                <div class="overture-copy">
+                    <p data-overture-i18n="eyebrow">HỒ GƯƠM OPERA · HÀ NỘI</p>
+                    <h2 id="overture-title"><img class="overture-slogan" src="assets/hero-slogan.png" alt="Nơi nghệ thuật thăng hoa" fetchpriority="high"></h2>
+                    <!-- <div class="overture-links"> -->
+                    <!-- <span data-overture-i18n="tagline">DI SẢN TRONG TỪNG NHỊP SỐNG ĐƯƠNG ĐẠI</span> -->
+                </div>
+            </div>
+            <span class="overture-caption" aria-hidden="true">THE OVERTURE / 01</span>
+            </div>
+        </section>
+
+        <!-- ==================================================
+           SECTION 01 - HERO / MAIN BANNER
+      ================================================== -->
+        <section id="main-hero" class="hero hero-architecture" aria-labelledby="hero-title" tabindex="-1" hidden>
+            <div class="hero-scene">
+                <picture>
+                    <source media="(max-width: 760px)" srcset="assets/hero-sky-mobile.webp"><img class="hero-sky" src="assets/hero-sky.webp" alt="" loading="lazy"></picture>
+                <div class="hero-brand">
+                    <h1 id="hero-title">
+                        <span>HỒ</span>
+                        <span>GƯƠM</span>
+                        <span class="hero-opera">OPERA</span>
+                    </h1>
+                </div>
+                <picture>
+                    <source media="(max-width: 760px)" srcset="assets/hero-drum-mobile.webp"><img loading="lazy" class="hero-drum" src="assets/hero-drum.webp" alt="" aria-hidden="true"></picture>
+                <picture>
+                    <source media="(max-width: 760px)" srcset="assets/hero-cranes-mobile.webp"><img loading="lazy" class="hero-cranes" src="assets/hero-cranes.webp" alt="" aria-hidden="true"></picture>
+                <picture>
+                    <source media="(max-width: 760px)" srcset="assets/hero-architecture-mobile.webp"><img class="hero-theatre" src="assets/hero-architecture.webp" alt="Kiến trúc nhà hát Hồ Gươm rực sáng dưới bầu trời đêm" loading="lazy"></picture>
+            </div>
+            <div class="hero-bottom-shade" aria-hidden="true"></div>
+            <div class="hero-bottom-bar">
+                <a class="hero-explore" href="#theatre">
+                    <span class="hero-explore-line" aria-hidden="true"></span>
+                    <span data-i18n="heroExplore">KHÁM PHÁ NHÀ HÁT</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18m-6-6 6 6 6-6"/></svg>
+                </a>
+                <div class="hero-booking">
+                    <a class="hero-schedule" href="#programs">
+                        <span data-i18n="heroSchedule">LỊCH BIỂU DIỄN</span>
+                        <strong data-i18n="heroEvening">Một đêm cùng nghệ thuật</strong>
+                    </a>
+                    <a class="button hero-book" href="dat-ve.html?program=hoanca">
+                        <span data-i18n="book">Đặt vé</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================
+           SECTION 02 - PERFORMANCE PROGRAMMES AND FILTERS
+      ================================================== -->
+        <section id="programs" class="programs featured-collection" aria-labelledby="programs-title">
+            <div class="programs-ornament" aria-hidden="true"></div>
+            <div class="container section-heading collection-heading">
+                <div class="collection-intro">
+                    <!-- <p class="eyebrow">HỒ GƯƠM OPERA · HÀ NỘI <span aria-hidden="true"></span></p> -->
+                    <h2 id="programs-title" data-i18n="programTitle">Chương trình biểu diễn</h2>
+                </div>
+                <div class="collection-aside">
+                    <button class="collection-all" aria-controls="program-filters" aria-expanded="false"><span data-i18n="allPrograms">Xem tất cả chương trình</span><svg aria-hidden="true"><use href="#arrow"/></svg></button>
+                </div>
+            </div>
+            <div id="program-filters" class="filters container" role="group" aria-label="Lọc chương trình" hidden><button class="selected" data-filter="all" aria-pressed="true" data-i18n="all">Tất cả</button><button data-filter="concert" aria-pressed="false" data-i18n="concert">Hòa nhạc</button><button data-filter="opera" aria-pressed="false">Opera</button>
+                <button data-filter="musical" aria-pressed="false" data-i18n="musical">Nhạc kịch</button>
+            </div>
+            <div class="collection-gallery">
+                <div class="collection-viewport" tabindex="0" role="region" aria-label="Chương trình biểu diễn">
+                    <div class="program-grid collection-track">
+                        <article class="program-card collection-card" data-category="concert">
+                            <a class="image-button collection-media" data-program="symphony" aria-label="Xem chương trình: The Symphony of Time" href="chuong-trinh.html?program=symphony"><img src="assets/posters/symphony.webp" alt="Poster The Symphony of Time" loading="lazy" width="356" height="634"></a>
+                            <div class="card-copy collection-info">
+                                <h3><a href="chuong-trinh.html?program=symphony">The Symphony of Time</a></h3>
+                                <p class="program-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M7 2v6M17 2v6M3 10h18"/></svg><span>20:00 - 23:00 · 10.07.2026</span><span class="program-venue"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s7-8 7-13a7 7 0 1 0-14 0c0 5 7 13 7 13Z"/><circle cx="12" cy="8" r="2"/></svg>NHÀ HÁT HỒ GƯƠM</span></p>
+                                <a class="text-link" data-program="symphony" href="dat-ve.html?program=symphony"><span data-i18n="book">Đặt vé</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+                            </div>
+                        </article>
+                        <article class="program-card collection-card" data-category="concert">
+                            <a class="image-button collection-media" data-program="tinhyeu" aria-label="Xem chương trình: Còn mãi một tình yêu" href="chuong-trinh.html?program=tinhyeu"><img src="assets/posters/tinhyeu.webp" alt="Poster Còn mãi một tình yêu" loading="lazy" width="356" height="634"></a>
+                            <div class="card-copy collection-info">
+                                <h3><a href="chuong-trinh.html?program=tinhyeu">Còn mãi một tình yêu</a></h3>
+                                <p class="program-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M7 2v6M17 2v6M3 10h18"/></svg><span>20:00 - 23:00 · 12.10.2026</span><span class="program-venue"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s7-8 7-13a7 7 0 1 0-14 0c0 5 7 13 7 13Z"/><circle cx="12" cy="8" r="2"/></svg>NHÀ HÁT HỒ GƯƠM</span></p>
+                                <a class="text-link" data-program="tinhyeu" href="dat-ve.html?program=tinhyeu"><span data-i18n="book">Đặt vé</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+                            </div>
+                        </article>
+                        <article class="program-card collection-card" data-category="musical">
+                            <a class="image-button collection-media" data-program="musical" aria-label="Xem chương trình: Musical Night" href="chuong-trinh.html?program=musical"><img src="assets/posters/musical.webp" alt="Poster Musical Night" loading="lazy" width="356" height="634"></a>
+                            <div class="card-copy collection-info">
+                                <h3><a href="chuong-trinh.html?program=musical">Musical Night</a></h3>
+                                <p class="program-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M7 2v6M17 2v6M3 10h18"/></svg><span>20:00 - 23:00 · 23–24.05.2026</span><span class="program-venue"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s7-8 7-13a7 7 0 1 0-14 0c0 5 7 13 7 13Z"/><circle cx="12" cy="8" r="2"/></svg>NHÀ HÁT HỒ GƯƠM</span></p>
+                                <a class="text-link" data-program="musical" href="dat-ve.html?program=musical"><span data-i18n="book">Đặt vé</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+                            </div>
+                        </article>
+                        <article class="program-card collection-card" data-category="concert">
+                            <a class="image-button collection-media" data-program="hoanca" aria-label="Xem chương trình: Khúc hoan ca" href="chuong-trinh.html?program=hoanca"><img src="assets/posters/hoanca.webp" alt="Poster Khúc hoan ca" loading="lazy" width="356" height="634"></a>
+                            <div class="card-copy collection-info">
+                                <h3><a href="chuong-trinh.html?program=hoanca">Khúc hoan ca</a></h3>
+                                <p class="program-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M7 2v6M17 2v6M3 10h18"/></svg><span>20:00 - 23:00 · 24–25.10.2026</span><span class="program-venue"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s7-8 7-13a7 7 0 1 0-14 0c0 5 7 13 7 13Z"/><circle cx="12" cy="8" r="2"/></svg>NHÀ HÁT HỒ GƯƠM</span></p>
+                                <a class="text-link" data-program="hoanca" href="dat-ve.html?program=hoanca"><span data-i18n="book">Đặt vé</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+                            </div>
+                        </article>
+                        <article class="program-card collection-card" data-category="concert">
+                            <a class="image-button collection-media" data-program="loi" aria-label="Xem chương trình: LỐI" href="chuong-trinh.html?program=loi"><img src="assets/posters/loi.webp" alt="Poster LỐI" loading="lazy" width="356" height="634"></a>
+                            <div class="card-copy collection-info">
+                                <h3><a href="chuong-trinh.html?program=loi">LỐI</a></h3>
+                                <p class="program-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M7 2v6M17 2v6M3 10h18"/></svg><span>20:00 - 23:00 · 17.09.2026</span><span class="program-venue"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s7-8 7-13a7 7 0 1 0-14 0c0 5 7 13 7 13Z"/><circle cx="12" cy="8" r="2"/></svg>NHÀ HÁT HỒ GƯƠM</span></p>
+                                <a class="text-link" data-program="loi" href="dat-ve.html?program=loi"><span data-i18n="book">Đặt vé</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+                            </div>
+                        </article>
+                        <article class="program-card collection-card" data-category="opera">
+                            <a class="image-button collection-media" data-program="traviata" aria-label="Xem chương trình: La Traviata" href="chuong-trinh.html?program=traviata"><img src="assets/posters/traviata.webp" alt="Poster La Traviata" loading="lazy" width="356" height="634"></a>
+                            <div class="card-copy collection-info">
+                                <h3><a href="chuong-trinh.html?program=traviata">La Traviata</a></h3>
+                                <p class="program-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M7 2v6M17 2v6M3 10h18"/></svg><span>20:00 - 23:00 · 30–31.07.2026</span><span class="program-venue"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s7-8 7-13a7 7 0 1 0-14 0c0 5 7 13 7 13Z"/><circle cx="12" cy="8" r="2"/></svg>NHÀ HÁT HỒ GƯƠM</span></p>
+                                <a class="text-link" data-program="traviata" href="dat-ve.html?program=traviata"><span data-i18n="book">Đặt vé</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-footer container"><span class="collection-signature">KIẾN TẠO NHỮNG TRẢI NGHIỆM VƯỢT THỜI GIAN</span><span class="collection-footer-rule" aria-hidden="true"></span>
+                <div class="collection-dots" aria-label="Trang chương trình"></div>
+                <div class="collection-controls"><button class="collection-nav collection-prev" aria-label="Chương trình trước"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg></button><button class="collection-nav collection-next" aria-label="Chương trình tiếp"><svg aria-hidden="true"><use href="#arrow"/></svg></button></div>
+            </div>
+        </section>
+
+        <!-- ==================================================
+           SECTION 03 - MEDIA
+      ================================================== -->
+        <section id="media" class="media-section" aria-labelledby="media-title">
+            <div class="media-scroll">
+                <div class="media-stage is-immersive" tabindex="0" role="region" aria-label="Media — dùng phím mũi tên để đổi video">
+                    <div class="media-background" aria-hidden="true">
+                        <div class="media-video-layer"><img src="assets/media/italia-mistero.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="assets/media/italia-mistero.jpg"></video></div>
+                        <div class="media-video-layer"><img src="assets/media/hanoi-niem-tin.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="assets/media/hanoi-niem-tin.jpg"></video></div>
+                        <div class="media-video-layer"><img src="assets/media/la-traviata.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="assets/media/la-traviata.jpg"></video></div>
+                    </div>
+                    <div class="media-ruler" aria-hidden="true"></div>
+                    <div class="media-ruler is-right" aria-hidden="true"></div>
+                    <div class="media-masthead">
+                        <!-- <span class="media-brand">HỒ GƯƠM OPERA / MEDIA</span> -->
+                        <div class="media-editorial">
+                            <p data-media-vi="NHỮNG KHOẢNH KHẮC ĐÁNG NHỚ" data-media-en="MOMENTS TO REMEMBER">NHỮNG KHOẢNH KHẮC ĐÁNG NHỚ</p>
+                            <h2 id="media-title" data-media-vi="HÒA NHẠC VẪN TIẾP DIỄN" data-media-en="THE MUSIC LIVES ON">HÒA NHẠC VẪN TIẾP DIỄN</h2>
+                            <p data-media-vi="CÂU CHUYỆN NGHỆ THUẬT QUA NHỮNG THƯỚC PHIM" data-media-en="STORIES OF ART THROUGH FILM">CÂU CHUYỆN NGHỆ THUẬT QUA NHỮNG THƯỚC PHIM</p>
+                        </div>
+                    </div>
+                    <article class="media-film is-active" data-index="0" data-title="Italia Mistero" data-category="Recap / Teatro Massimo" data-video="assets/media/italia-mistero.mp4" aria-label="Italia Mistero">
+                        <div class="media-composition">
+                            <h3 class="media-name is-left"><span><em>Italia</em></span></h3>
+                            <div class="media-center">
+                                <div class="media-meta"><span>Recap</span><span class="media-symbols" aria-hidden="true">ⓥ ⊕ ⓥ</span><span>Teatro Massimo</span></div>
+                                <div class="media-window"><video data-src="assets/media/italia-mistero-preview.mp4" poster="assets/media/italia-mistero.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><button class="media-play" aria-label="Xem video: Italia Mistero"
+                                        aria-haspopup="dialog"><span class="media-play-label"><b class="media-dot"></b><span data-media-vi="Xem video" data-media-en="Play video">Xem video</span></span><i class="media-corner"></i><i class="media-corner"></i><i class="media-corner"></i><i class="media-corner"></i></button></div>
+                                <div class="media-meta"><span>01.</span><span class="media-subtitle"><em>Italia</em> Mistero<small>DẤU ẤN TEATRO MASSIMO</small></span><span>.03</span></div>
+                            </div>
+                            <div class="media-name is-right" aria-hidden="true"><span>Mistero</span></div>
+                        </div>
+                    </article>
+                    <article class="media-film" data-index="1" data-title="Hà Nội — Niềm tin và hy vọng" data-category="Hòa nhạc / Giao hưởng" data-video="assets/media/hanoi-niem-tin.mp4" aria-label="Hà Nội — Niềm tin và hy vọng" inert>
+                        <div class="media-composition">
+                            <h3 class="media-name is-left"><span><em>Hà Nội</em></span></h3>
+                            <div class="media-center">
+                                <div class="media-meta"><span>Hòa nhạc</span><span class="media-symbols" aria-hidden="true">ⓥ ⊕ ⓥ</span><span>Giao hưởng</span></div>
+                                <div class="media-window"><video data-src="assets/media/hanoi-niem-tin-preview.mp4" poster="assets/media/hanoi-niem-tin.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><button class="media-play" aria-label="Xem video: Hà Nội — Niềm tin và hy vọng"
+                                        aria-haspopup="dialog"><span class="media-play-label"><b class="media-dot"></b><span data-media-vi="Xem video" data-media-en="Play video">Xem video</span></span><i class="media-corner"></i><i class="media-corner"></i><i class="media-corner"></i><i class="media-corner"></i></button></div>
+                                <div class="media-meta"><span>02.</span><span class="media-subtitle">Hà Nội<small>NIỀM TIN VÀ HY VỌNG</small></span><span>.03</span></div>
+                            </div>
+                            <div class="media-name is-right" aria-hidden="true"><span>Niềm tin<br>và hy vọng</span></div>
+                        </div>
+                    </article>
+                    <article class="media-film" data-index="2" data-title="La Traviata — 170 năm chinh phục khán giả" data-category="Opera / La Traviata" data-video="assets/media/la-traviata.mp4" aria-label="La Traviata — 170 năm chinh phục khán giả" inert>
+                        <div class="media-composition">
+                            <h3 class="media-name is-left"><span><em>La</em></span></h3>
+                            <div class="media-center">
+                                <div class="media-meta"><span>Opera</span><span class="media-symbols" aria-hidden="true">ⓥ ⊕ ⓥ</span><span>La Traviata</span></div>
+                                <div class="media-window"><video data-src="assets/media/la-traviata-preview.mp4" poster="assets/media/la-traviata.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><button class="media-play" aria-label="Xem video: La Traviata — 170 năm chinh phục khán giả"
+                                        aria-haspopup="dialog"><span class="media-play-label"><b class="media-dot"></b><span data-media-vi="Xem video" data-media-en="Play video">Xem video</span></span><i class="media-corner"></i><i class="media-corner"></i><i class="media-corner"></i><i class="media-corner"></i></button></div>
+                                <div class="media-meta"><span>03.</span><span class="media-subtitle"><em>La</em> Traviata<small data-media-vi="170 NĂM CHINH PHỤC KHÁN GIẢ" data-media-en="CAPTIVATING AUDIENCES FOR 170 YEARS">170 NĂM CHINH PHỤC KHÁN GIẢ</small></span><span>.03</span></div>
+                            </div>
+                            <div class="media-name is-right" aria-hidden="true"><span>Traviata</span></div>
+                        </div>
+                    </article>
+                    <div class="media-footer"><button class="media-motion" aria-pressed="false">Dừng xem trước</button><span class="media-scroll-hint" data-media-vi="Cuộn để khám phá" data-media-en="Scroll to explore">Cuộn để khám phá</span>
+                        <div class="media-pagination"><button data-media-select="0" aria-label="Italia Mistero" aria-current="true">01</button><button data-media-select="1" aria-label="Hà Nội — Niềm tin và hy vọng" aria-current="false">02</button><button data-media-select="2" aria-label="La Traviata — 170 năm chinh phục khán giả"
+                                aria-current="false">03</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================
+           SECTION 04 - INTRODUCTION TO HO GUOM OPERA
+      ================================================== -->
+        <section id="theatre" class="theatre" aria-labelledby="theatre-title">
+            <div class="theatre-intro">
+                <div class="theatre-intro-stage">
+                    <div class="theatre-intro-label">
+                        <span data-theatre-vi="04 / Giới thiệu nhà hát" data-theatre-en="04 / About the theatre">04 / Giới thiệu nhà hát</span>
+                        <span data-theatre-vi="Hà Nội · Việt Nam" data-theatre-en="Hanoi · Vietnam">Hà Nội · Việt Nam</span>
+                    </div>
+                    <div class="theatre-intro-copy">
+                        <svg class="theatre-column-mark" viewBox="0 0 40 100" aria-hidden="true"><defs><linearGradient id="column-gold" x2="0" y2="1"><stop stop-color="#d8bd80"/><stop offset="1" stop-color="#d8bd80" stop-opacity="0"/></linearGradient></defs><g fill="none" stroke="url(#column-gold)" stroke-width="1.3"><path d="M2 3h36M4 7h32M6 11h28M8 15h24M9 16v82M13 16v82M18 16v82M22 16v82M27 16v82M31 16v82"/></g></svg>
+                        <p data-theatre-vi="Nơi kiến trúc gặp nghệ thuật" data-theatre-en="Where architecture meets art">Nơi kiến trúc gặp nghệ thuật</p>
+                        <h2 id="theatre-title" data-theatre-vi="Một biểu tượng mới&lt;br&gt;giữa &lt;em&gt;trái tim Hà Nội&lt;/em&gt;" data-theatre-en="A new landmark&lt;br&gt;in the &lt;em&gt;heart of Hanoi&lt;/em&gt;">Một biểu tượng mới<br>giữa <em>trái tim Hà Nội</em></h2>
+                        <p class="theatre-scroll-cue" data-theatre-vi="Cuộn để bước vào nhà hát ↓" data-theatre-en="Scroll to enter the theatre ↓">Cuộn để bước vào nhà hát ↓</p>
+                    </div>
+                    <div class="theatre-dome" aria-hidden="true">
+                        <img src="assets/theatre/Building.webp" alt="" loading="lazy">
+                    </div>
+                    <div class="theatre-values" data-theatre-vi="KIẾN TRÚC<br>NGHỆ THUẬT<br>CON NGƯỜI<br>HÀ NỘI" data-theatre-en="ARCHITECTURE<br>ART<br>PEOPLE<br>HANOI">KIẾN TRÚC<br>NGHỆ THUẬT<br>CON NGƯỜI<br>HÀ NỘI</div>
+                    <blockquote class="theatre-quote" data-theatre-vi="Nơi di sản<br>được viết tiếp<br>bằng ngôn ngữ<br>của thời đại" data-theatre-en="Where heritage<br>is reimagined<br>in the language<br>of our time">Nơi di sản<br>được viết tiếp<br>bằng ngôn ngữ<br>của thời đại</blockquote>
+                    <div class="theatre-intro-caption">
+                        <strong data-theatre-vi="Hồ Gươm Opera" data-theatre-en="Ho Guom Opera">Hồ Gươm Opera</strong>
+                        <span data-theatre-vi="40 Hàng Bài · Hoàn Kiếm" data-theatre-en="40 Hang Bai · Hoan Kiem">40 Hàng Bài · Hoàn Kiếm</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theatre-gallery">
+                <div class="theatre-gallery-stage">
+                    <div class="theatre-gallery-label" aria-hidden="true">
+                        <span data-theatre-vi="Khám phá không gian" data-theatre-en="Explore the spaces">Khám phá không gian</span>
+                        <span data-theatre-vi="Cuộn ngang qua nhà hát" data-theatre-en="A horizontal journey through the theatre">Cuộn ngang qua nhà hát</span>
+                    </div>
+                    <div class="theatre-viewport" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Khám phá nhà hát. Dùng phím mũi tên trái và phải.">
+                        <div class="theatre-track">
+                            <article class="theatre-panel">
+                                <img class="theatre-panel-background" src="assets/theatre/building-background.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                                <h3 class="theatre-panel-heading" data-theatre-vi="Kiến trúc &lt;em&gt;giao hòa&lt;/em&gt;" data-theatre-en="Architecture in &lt;em&gt;harmony&lt;/em&gt;">Kiến trúc <em>giao hòa</em></h3>
+                                <figure class="theatre-photo-pair">
+                                    <div class="theatre-main-photo"><img src="assets/theatre/Building.webp" alt="Mặt tiền Nhà hát Hồ Gươm với hàng cột trắng" loading="lazy"><span class="theatre-photo-number">01 / 08</span></div>
+                                    <div class="theatre-detail-photo"><img src="assets/theatre/Building.webp" alt="Chi tiết mặt tiền Nhà hát Hồ Gươm về đêm" loading="lazy"></div>
+                                </figure>
+                                <p class="theatre-panel-copy" data-theatre-vi="Những đường nét cổ điển được diễn giải bằng tinh thần đương đại, tạo nên một công trình trang nhã giữa trung tâm Thủ đô." data-theatre-en="Classical lines are reinterpreted through a contemporary lens, creating an elegant landmark in the centre of the capital.">Những đường nét cổ điển được diễn giải bằng tinh thần đương đại, tạo nên một công trình trang nhã giữa trung tâm Thủ đô.</p>
+                                <p class="theatre-panel-caption" data-theatre-vi="Mặt tiền nhà hát · Hàng Bài" data-theatre-en="The theatre façade · Hang Bai">Mặt tiền nhà hát · Hàng Bài</p>
+                            </article>
+                            <article class="theatre-panel">
+                                <img class="theatre-panel-background" src="assets/theatre/foyer-background.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                                <h3 class="theatre-panel-heading" data-theatre-vi="Sảnh đón &lt;em&gt;tráng lệ&lt;/em&gt;" data-theatre-en="A &lt;em&gt;grand&lt;/em&gt; welcome">Sảnh đón <em>tráng lệ</em></h3>
+                                <figure class="theatre-photo-pair">
+                                    <div class="theatre-main-photo"><img src="assets/theatre/foyer-main.webp" alt="Sảnh lớn với cầu thang cong của Nhà hát Hồ Gươm" loading="lazy"><span class="theatre-photo-number">02 / 08</span></div>
+                                    <div class="theatre-detail-photo"><img src="assets/theatre/foyer-detail.webp" alt="Chi tiết cầu thang và trần trang trí trong nhà hát" loading="lazy"></div>
+                                </figure>
+                                <p class="theatre-panel-copy" data-theatre-vi="Từ cầu thang uốn lượn đến ánh sáng phản chiếu trên trần, mỗi chi tiết đều chuẩn bị cảm xúc cho khán giả trước giờ màn nhung mở." data-theatre-en="From sweeping staircases to light reflected across the ceiling, every detail prepares the audience before the curtain rises.">Từ cầu thang uốn lượn đến ánh sáng phản chiếu trên trần, mỗi chi tiết đều chuẩn bị cảm xúc cho khán giả trước giờ màn nhung mở.</p>
+                                <p class="theatre-panel-caption" data-theatre-vi="Sảnh lớn · Không gian chuyển tiếp" data-theatre-en="Grand foyer · The threshold">Sảnh lớn · Không gian chuyển tiếp</p>
+                            </article>
+                            <article class="theatre-panel">
+                                <img class="theatre-panel-background" src="assets/theatre/hall-background.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                                <h3 class="theatre-panel-heading" data-theatre-vi="Khán phòng &lt;em&gt;đa giác quan&lt;/em&gt;" data-theatre-en="An &lt;em&gt;immersive&lt;/em&gt; auditorium">Khán phòng <em>đa giác quan</em></h3>
+                                <figure class="theatre-photo-pair">
+                                    <div class="theatre-main-photo"><img src="assets/theatre/hall-main.webp" alt="Toàn cảnh khán phòng Nhà hát Hồ Gươm" loading="lazy"><span class="theatre-photo-number">03 / 08</span></div>
+                                    <div class="theatre-detail-photo"><img src="assets/theatre/hall-detail.webp" alt="Sân khấu Nhà hát Hồ Gươm trong ánh sáng biểu diễn" loading="lazy"></div>
+                                </figure>
+                                <p class="theatre-panel-copy" data-theatre-vi="Âm học, ánh sáng và hình học của khán phòng được hòa quyện để mọi vị trí đều trở thành điểm gặp gỡ gần gũi với sân khấu." data-theatre-en="Acoustics, lighting and geometry work together so every seat feels intimately connected to the stage.">Âm học, ánh sáng và hình học của khán phòng được hòa quyện để mọi vị trí đều trở thành điểm gặp gỡ gần gũi với sân khấu.</p>
+                                <p class="theatre-panel-caption" data-theatre-vi="Khán phòng · Sân khấu" data-theatre-en="Auditorium · Stage">Khán phòng · Sân khấu</p>
+                            </article>
+                            <article class="theatre-panel">
+                                <img class="theatre-panel-background" src="assets/theatre/performance-background.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                                <h3 class="theatre-panel-heading" data-theatre-vi="Nơi cảm xúc &lt;em&gt;thăng hoa&lt;/em&gt;" data-theatre-en="Where emotion &lt;em&gt;soars&lt;/em&gt;">Nơi cảm xúc <em>thăng hoa</em></h3>
+                                <figure class="theatre-photo-pair">
+                                    <div class="theatre-main-photo"><img src="assets/theatre/performance-original.webp" alt="Nghệ sĩ vĩ cầm Caroline Campbell biểu diễn tại Nhà hát Hồ Gươm" loading="lazy"><span class="theatre-photo-number">04 / 08</span></div>
+                                    <div class="theatre-detail-photo"><img src="assets/theatre/audience-original.webp" alt="Khán giả thưởng thức chương trình trong nhà hát" loading="lazy"></div>
+                                </figure>
+                                <p class="theatre-panel-copy" data-theatre-vi="Nhà hát chỉ thực sự sống khi nghệ sĩ và khán giả cùng chia sẻ một khoảnh khắc — khi âm nhạc trở thành ký ức chung." data-theatre-en="The theatre truly comes alive when artists and audiences share one moment, and music becomes a collective memory.">Nhà hát chỉ thực sự sống khi nghệ sĩ và khán giả cùng chia sẻ một khoảnh khắc — khi âm nhạc trở thành ký ức chung.</p>
+                                <p class="theatre-panel-caption"><a href="#programs" data-theatre-vi="Khám phá chương trình biểu diễn ↗" data-theatre-en="Explore performances ↗">Khám phá chương trình biểu diễn ↗</a></p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="theatre-gallery-nav" aria-label="Điều khiển bộ sưu tập">
+                        <button type="button" data-theatre-prev disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg><span class="theatre-current">01</span></button>
+                        <div class="theatre-progress" aria-hidden="true"><span></span></div>
+                        <button type="button" data-theatre-next><span class="theatre-next-number">02</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+                    </div>
+                    <p class="theatre-gallery-status" aria-live="polite">1 / 4 — Kiến trúc giao hòa</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================
+           BOOKING GUIDE - FOUR STEPS TO AN EVENING AT THE OPERA
+      ================================================== -->
+        <section id="booking-guide" class="booking-guide" aria-labelledby="booking-guide-title">
+            <div class="booking-layout">
+                <div class="booking-visual">
+                    <figure class="booking-panel">
+                        <img src="assets/theatre/performance-original.webp" alt="Nghệ sĩ Caroline Campbell trên sân khấu Hồ Gươm Opera" loading="lazy">
+                    </figure>
+                    <figure class="booking-panel">
+                        <img src="assets/theatre/hall-detail.webp" alt="Các tầng ghế trong khán phòng Hồ Gươm Opera" loading="lazy">
+                    </figure>
+                    <figure class="booking-panel">
+                        <img src="assets/theatre/Building.webp" alt="Mặt tiền Nhà hát Hồ Gươm tại 40 Hàng Bài, Hà Nội" loading="lazy">
+                    </figure>
+                    <figure class="booking-panel">
+                        <img src="assets/theatre/audience-original.webp" alt="Nghệ sĩ và khán giả cùng chia sẻ một đêm biểu diễn" loading="lazy">
+                    </figure>
+                </div>
+                <div class="booking-copy">
+                    <p class="eyebrow" data-booking-vi="HƯỚNG DẪN ĐẶT VÉ" data-booking-en="PLAN YOUR EVENING">HƯỚNG DẪN ĐẶT VÉ</p>
+                    <h2 id="booking-guide-title"><span class="booking-line-mask"><span data-booking-vi="Bốn bước đến" data-booking-en="Four steps to">Bốn bước đến</span></span><span class="booking-line-mask"><em data-booking-vi="một đêm nghệ thuật" data-booking-en="a night of art">một đêm nghệ thuật</em></span></h2>
+                    <p class="booking-intro" data-booking-vi="Từ chương trình bạn yêu thích đến khoảnh khắc màn nhung mở." data-booking-en="From finding your performance to the moment the curtain rises.">Từ chương trình bạn yêu thích đến khoảnh khắc màn nhung mở.</p>
+                    <ol class="booking-steps">
+                        <li class="booking-step"><span aria-hidden="true">01</span>
+                            <div>
+                                <h3 data-booking-vi="Khám phá chương trình" data-booking-en="Explore performances">Khám phá chương trình</h3>
+                                <p data-booking-vi="Tìm đêm diễn chạm đến cảm xúc của bạn trong lịch chương trình." data-booking-en="Find the performance that speaks to you in our programme.">Tìm đêm diễn chạm đến cảm xúc của bạn trong lịch chương trình.</p>
+                            </div>
+                        </li>
+                        <li class="booking-step"><span aria-hidden="true">02</span>
+                            <div>
+                                <h3 data-booking-vi="Chọn ngày và vị trí ghế" data-booking-en="Choose your date and seat">Chọn ngày và vị trí ghế</h3>
+                                <p data-booking-vi="Chọn suất diễn và chỗ ngồi phù hợp khi đặt vé chương trình." data-booking-en="Select your preferred performance date and seating when booking.">Chọn suất diễn và chỗ ngồi phù hợp khi đặt vé chương trình.</p>
+                            </div>
+                        </li>
+                        <li class="booking-step"><span aria-hidden="true">03</span>
+                            <div>
+                                <h3 data-booking-vi="Đến Nhà hát Hồ Gươm" data-booking-en="Arrive at Ho Guom Opera">Đến Nhà hát Hồ Gươm</h3>
+                                <p data-booking-vi="40 Hàng Bài, Hà Nội. Chuẩn bị vé và đến trước giờ biểu diễn." data-booking-en="40 Hang Bai, Hanoi. Have your ticket ready and arrive before the performance.">40 Hàng Bài, Hà Nội. Chuẩn bị vé và đến trước giờ biểu diễn.</p>
+                            </div>
+                        </li>
+                        <li class="booking-step"><span aria-hidden="true">04</span>
+                            <div>
+                                <h3 data-booking-vi="Trải nghiệm một đêm nghệ thuật" data-booking-en="Experience a night of art">Trải nghiệm một đêm nghệ thuật</h3>
+                                <p data-booking-vi="An vị, thả lỏng và để những thanh âm dẫn lối cảm xúc." data-booking-en="Take your seat, settle in and let the music move you.">An vị, thả lỏng và để những thanh âm dẫn lối cảm xúc.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================
+           SECTION 06 - VISITOR INFORMATION
+      ================================================== -->
+        <!-- <section id="visit" class="visit section-light">
+            <div class="container">
+                <p class="eyebrow" data-i18n="visitEyebrow">THÔNG TIN DÀNH CHO KHÁCH THAM DỰ</p>
+                <h2 data-i18n="visitTitle">Sẵn sàng cho đêm diễn</h2>
+                <div class="visit-grid">
+                    <button class="visit-item" data-info="directions">
+              <span class="visit-icon">
+                <svg>
+                  <use href="#pin"/>
+                </svg>
+              </span>
+              <span>
+                <strong data-i18n="directionsTitle">Đường đến nhà hát</strong>
+                <small data-i18n="directionsSubtitle">Vị trí, phương tiện, bãi đỗ xe</small>
+              </span>
+              <svg class="visit-arrow">
+                <use href="#arrow"/>
+              </svg>
+            </button>
+                    <button class="visit-item" data-info="guide">
+              <span class="visit-icon">
+                <svg>
+                  <use href="#ticket"/>
+                </svg>
+              </span>
+              <span>
+                <strong data-i18n="guideTitle">Hướng dẫn tham dự</strong>
+                <small data-i18n="guideSubtitle">Quy định, tiện ích, dịch vụ</small>
+              </span>
+              <svg class="visit-arrow">
+                <use href="#arrow"/>
+              </svg>
+            </button>
+                    <button class="visit-item" data-info="support">
+              <span class="visit-icon">
+                <svg>
+                  <use href="#headphones"/>
+                </svg>
+              </span>
+              <span>
+                <strong data-i18n="supportTitle">Hỗ trợ đặt vé</strong>
+                <small data-i18n="supportSubtitle">Liên hệ, câu hỏi thường gặp</small>
+              </span>
+              <svg class="visit-arrow">
+                <use href="#arrow"/>
+              </svg>
+            </button>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- ==================================================
+           SECTION 07 - CLOSING / CALL TO ACTION
+      ================================================== -->
+    </main>
+
+    <div class="finale-shell">
+        <section id="finale" class="finale" aria-labelledby="finale-title">
+            <div class="finale-visual">
+                <img class="finale-background" src="assets/finale/auditorium.webp" alt="" aria-hidden="true" loading="lazy" width="1672" height="941">
+                <div class="finale-dim" aria-hidden="true"></div>
+                <img class="finale-artist" src="assets/finale/artist.webp" alt="Nghệ sĩ đứng giữa sân khấu, hướng về khán phòng Hồ Gươm Opera" loading="lazy" width="1672" height="941">
+                <div class="finale-shade" aria-hidden="true"></div>
+                <div class="finale-curtain is-left" aria-hidden="true"><img src="assets/finale/curtain-left.webp" alt="" loading="lazy"></div>
+                <div class="finale-curtain is-right" aria-hidden="true"><img src="assets/finale/curtain-right.webp" alt="" loading="lazy"></div>
+                <div class="finale-copy">
+                    <p class="finale-kicker">HỒ GƯƠM OPERA · HÀ NỘI</p>
+                    <h2 id="finale-title"><span class="finale-line"><span data-finale-vi="SÂN KHẤU" data-finale-en="THE STAGE">SÂN KHẤU</span></span><span class="finale-line"><em data-finale-vi="ĐANG CHỜ BẠN" data-finale-en="AWAITS YOU">ĐANG CHỜ BẠN</em></span></h2>
+                    <div class="finale-program">
+                        <p class="finale-program-label" data-finale-vi="MỘT ĐÊM HÒA NHẠC TẠI HỒ GƯƠM" data-finale-en="AN EVENING OF MUSIC AT HO GUOM">MỘT ĐÊM HÒA NHẠC TẠI HỒ GƯƠM</p>
+                        <h3>Khúc hoan ca</h3>
+                        <p class="finale-program-date">24–25.10.2026 · 20:00 - 23:00</p>
+                        <p class="finale-program-artists">Mozart · Brahms · The Kyushu Symphony Orchestra</p>
+                        <a class="button gold finale-cta" data-program="hoanca" href="dat-ve.html?program=hoanca"><span data-i18n="book">Đặt vé</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+                    </div>
+                </div>
+                <span class="finale-scroll" data-finale-vi="CUỘN ĐỂ MỞ MÀN" data-finale-en="SCROLL TO RAISE THE CURTAIN">CUỘN ĐỂ MỞ MÀN</span>
+            </div>
+        </section>
+
+        <!-- ==================================================
+         FOOTER - BRAND AND NAVIGATION
+    ================================================== -->
+        <footer class="footer opera-footer" aria-label="Thông tin Hồ Gươm Opera">
+            <span class="footer-ornament footer-ornament-top" aria-hidden="true">✧</span>
+            <div class="footer-main">
+                <div class="footer-about">
+                    <a class="footer-logo" href="index.html"><img src="assets/logo.png" alt="Hồ Gươm Opera" width="592" height="297" loading="lazy"></a>
+                    <!-- <p>Nơi nghệ thuật thăng hoa, kết nối con người với những giá trị tinh hoa. Ho Guom Opera mang đến những trải nghiệm biểu diễn đẳng cấp, tôn vinh vẻ đẹp vượt thời gian của âm nhạc và nghệ thuật.</p> -->
+                    <div class="footer-socials" aria-label="Mạng xã hội">
+                        <button type="button" data-footer-social="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M14 21v-8h3l.5-4H14V7c0-1 .3-2 2-2h2V1.5L15 1c-3 0-5 2-5 5v3H7v4h3v8z"/></svg></button>
+                        <button type="button" data-footer-social="YouTube" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="4" fill="currentColor" stroke="none"/><path d="m10 9 5 3-5 3z" fill="#11110f" stroke="none"/></svg></button>
+                        <button type="button" data-footer-social="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".7" fill="currentColor"/></svg></button>
+                        <button type="button" data-footer-social="Spotify" aria-label="Spotify"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="currentColor" stroke="none"/><path d="M6 9q6-3 12 0M7 12q5-2.5 10 0M8 15q4-2 8 0" stroke="#11110f" stroke-width="1.7"/></svg></button>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h2>Liên kết nhanh</h2>
+                    <nav aria-label="Điều hướng cuối trang">
+                        <a href="#programs">Lịch diễn <span aria-hidden="true">›</span></a>
+                        <a href="#media">Sự kiện <span aria-hidden="true">›</span></a>
+                        <a href="thu-vien-so.html">Thư viện số <span aria-hidden="true">›</span></a>
+                        <a href="#theatre">Giới thiệu <span aria-hidden="true">›</span></a>
+                        <a href="mailto:info@hoguomopera.vn">Liên hệ <span aria-hidden="true">›</span></a>
+                    </nav>
+                </div>
+                <div class="footer-contact">
+                    <h2>Thông tin liên hệ</h2>
+                    <address>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=40+Hang+Bai+Hoan+Kiem+Ha+Noi" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>40 Hàng Bài, Hoàn Kiếm,<br>Hà Nội</span></a>
+                        <a href="tel:+842439365006"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 3 3 5-3 3c1 3 3 5 6 6l3-3 5 3-1 4C10 24 0 13 3 3Z"/></svg><span>024 3936 5006</span></a>
+                        <a href="mailto:info@hoguomopera.vn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14"/><path d="m2 5 10 8L22 5"/></svg><span>info@hoguomopera.vn</span></a>
+                    </address>
+                </div>
+                <section class="footer-newsletter" aria-labelledby="footer-newsletter-title">
+                    <span class="newsletter-crest" aria-hidden="true">✧</span>
+                    <div class="newsletter-mail" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14"/><path d="m2 5 10 8L22 5"/></svg></div>
+                    <h2 id="footer-newsletter-title">Đăng ký nhận tin</h2>
+                    <p>Cập nhật lịch diễn, sự kiện đặc biệt và những câu chuyện nghệ thuật mới nhất từ Ho Guom Opera.</p>
+                    <form class="footer-subscribe">
+                        <label class="footer-sr-only" for="footer-email">Email của bạn</label>
+                        <input id="footer-email" name="email" type="email" placeholder="Nhập email của bạn" autocomplete="email" required maxlength="254">
+                        <button type="submit" aria-label="Đăng ký nhận tin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+                    </form>
+                    <p class="footer-subscribe-status" role="status" hidden></p>
+                </section>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-ornament" aria-hidden="true">✧</span>
+                <button class="footer-back-top" type="button" aria-label="Về đầu trang" title="Về đầu trang"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></button>
+                <p>© 2026 Ho Guom Opera. Tất cả quyền được bảo lưu.</p>
+                <div class="footer-legal">
+                    <button type="button" data-footer-policy="Điều khoản sử dụng">Điều khoản sử dụng</button>
+                    <button type="button" data-footer-policy="Chính sách bảo mật">Chính sách bảo mật</button>
+                    <details class="footer-language">
+                        <summary><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6.5h14M5 17.5h14"/></svg><span class="footer-language-label">Tiếng Việt</span><span aria-hidden="true">⌄</span></summary>
+                        <div class="footer-language-options"><button type="button" data-lang="vi" aria-pressed="true">Tiếng Việt</button><button type="button" data-lang="en" aria-pressed="false">English</button></div>
+                    </details>
+                </div>
+            </div>
+            <dialog class="footer-info-dialog" aria-labelledby="footer-info-title">
+                <h2 id="footer-info-title"></h2>
+                <p></p>
+                <form method="dialog"><button type="submit">Đóng</button></form>
+            </dialog>
+        </footer>
+    </div>
+
+    <!-- ==================================================
+         DIALOG - PROGRAMME DETAILS AND VISITOR GUIDES
+    ================================================== -->
+    <dialog id="detail-dialog" aria-labelledby="dialog-title">
+        <button class="dialog-close" aria-label="Đóng">
+        <svg>
+          <use href="#close"/>
+        </svg>
+      </button>
+        <img class="dialog-image" alt="" hidden>
+        <div class="dialog-copy">
+            <p class="eyebrow dialog-eyebrow"></p>
+            <h2 id="dialog-title"></h2>
+            <div id="dialog-body"></div>
+            <img class="dialog-lotus" src="assets/hoa-sen.png" alt="" aria-hidden="true" loading="lazy">
+            <button class="button dialog-done" data-i18n="close">Đóng</button>
+        </div>
+    </dialog>
+    <!-- ==================================================
+         HEADER DIALOG - SEARCH, MEDIA AND ACCOUNT INFORMATION
+    ================================================== -->
+    <dialog id="header-dialog" aria-labelledby="header-dialog-title">
+        <button class="dialog-close header-dialog-close" aria-label="Đóng">
+        <svg aria-hidden="true">
+          <use href="#close"/>
+        </svg>
+      </button>
+        <div class="dialog-copy">
+            <p class="eyebrow">HỒ GƯƠM OPERA</p>
+            <h2 id="header-dialog-title"></h2>
+            <div id="header-dialog-body"></div>
+        </div>
+    </dialog>
+    <dialog class="media-dialog" aria-labelledby="media-dialog-title">
+        <video-player class="media-videojs"><video-skin class="media-videojs-skin"><video class="media-player" playsinline preload="none"></video></video-skin></video-player>
+        <div class="media-player-shade"></div>
+        <div class="media-player-nav"><button class="media-dialog-close" autofocus data-media-vi="Quay lại" data-media-en="Back">Quay lại</button><button class="media-info-toggle" aria-expanded="false" aria-controls="media-info" data-media-vi="Thông tin" data-media-en="Info">Thông tin</button>
+            <span aria-hidden="true">●</span>
+        </div>
+        <div class="media-player-sides"><button data-player-step="-1" data-media-vi="Trước" data-media-en="Prev">Trước</button><button data-player-step="1" data-media-vi="Tiếp" data-media-en="Next">Tiếp</button></div>
+        <button class="media-big-play" aria-label="Phát video">Play</button>
+        <div class="media-player-controls">
+            <div class="media-player-title-row">
+                <h2 id="media-dialog-title">Media</h2><span class="media-player-category"></span></div><output class="media-time">00:00 · 00:00</output><input class="media-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Tua video">
+            <div class="media-player-buttons"><button class="media-mute">Tắt tiếng</button><button class="media-toggle">Phát</button><button class="media-fullscreen" data-media-vi="Toàn màn hình" data-media-en="Fullscreen">Toàn màn hình</button></div>
+        </div>
+        <div id="media-info" class="media-info" hidden></div>
+        <p class="media-error" role="status" hidden></p>
+    </dialog>
+</body>
+
+</html>

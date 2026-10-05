@@ -1,0 +1,158 @@
+[
+  {
+    "from": "assets/posters/symphony.jpg",
+    "to": "assets/posters/symphony.webp",
+    "before": 338182,
+    "after": 31732
+  },
+  {
+    "from": "assets/posters/musical.jpg",
+    "to": "assets/posters/musical.webp",
+    "before": 391815,
+    "after": 48090
+  },
+  {
+    "from": "assets/posters/loi.png",
+    "to": "assets/posters/loi.webp",
+    "before": 289896,
+    "after": 17004
+  },
+  {
+    "from": "assets/posters/traviata.png",
+    "to": "assets/posters/traviata.webp",
+    "before": 488862,
+    "after": 73098
+  },
+  {
+    "from": "assets/posters/hoanca.jpg",
+    "to": "assets/posters/hoanca.webp",
+    "before": 327118,
+    "after": 33106
+  },
+  {
+    "from": "assets/posters/tinhyeu.jpg",
+    "to": "assets/posters/tinhyeu.webp",
+    "before": 172028,
+    "after": 23148
+  },
+  {
+    "from": "assets/conductor.png",
+    "to": "assets/conductor.webp",
+    "before": 1884478,
+    "after": 75010
+  },
+  {
+    "from": "assets/hero-sky.png",
+    "to": "assets/hero-sky.webp",
+    "before": 1308810,
+    "after": 23046
+  },
+  {
+    "from": "assets/hero-drum.png",
+    "to": "assets/hero-drum.webp",
+    "before": 1962978,
+    "after": 316078
+  },
+  {
+    "from": "assets/hero-theatre.png",
+    "to": "assets/hero-theatre.webp",
+    "before": 1471933,
+    "after": 156178
+  },
+  {
+    "from": "assets/hero-cranes.png",
+    "to": "assets/hero-cranes.webp",
+    "before": 1240281,
+    "after": 366102
+  },
+  {
+    "from": "assets/theatre/Building.png",
+    "to": "assets/theatre/Building.webp",
+    "before": 2431542,
+    "after": 245842
+  },
+  {
+    "from": "assets/theatre/foyer-main.png",
+    "to": "assets/theatre/foyer-main.webp",
+    "before": 2155246,
+    "after": 181630
+  },
+  {
+    "from": "assets/theatre/foyer-detail.png",
+    "to": "assets/theatre/foyer-detail.webp",
+    "before": 2199393,
+    "after": 191214
+  },
+  {
+    "from": "assets/theatre/hall-main.png",
+    "to": "assets/theatre/hall-main.webp",
+    "before": 2210588,
+    "after": 192936
+  },
+  {
+    "from": "assets/theatre/hall-detail.png",
+    "to": "assets/theatre/hall-detail.webp",
+    "before": 2546075,
+    "after": 240890
+  },
+  {
+    "from": "assets/theatre/performance-original.jpg",
+    "to": "assets/theatre/performance-original.webp",
+    "before": 1180407,
+    "after": 154222
+  },
+  {
+    "from": "assets/theatre/audience-original.jpg",
+    "to": "assets/theatre/audience-original.webp",
+    "before": 515670,
+    "after": 253760
+  },
+  {
+    "from": "assets/finale/auditorium.png",
+    "to": "assets/finale/auditorium.webp",
+    "before": 2210588,
+    "after": 192936
+  },
+  {
+    "from": "assets/finale/artist.png",
+    "to": "assets/finale/artist.webp",
+    "before": 2149953,
+    "after": 185676
+  },
+  {
+    "from": "assets/finale/curtain-left.png",
+    "to": "assets/finale/curtain-left.webp",
+    "before": 1132896,
+    "after": 155502
+  },
+  {
+    "from": "assets/finale/curtain-right.png",
+    "to": "assets/finale/curtain-right.webp",
+    "before": 1257214,
+    "after": 171322
+  },
+  {
+    "from": "assets/library/background.png",
+    "to": "assets/library/background.webp",
+    "before": 2178949,
+    "after": 189390
+  },
+  {
+    "from": "assets/ballet.png",
+    "to": "assets/ballet.webp",
+    "before": 2033303,
+    "after": 79924
+  },
+  {
+    "from": "assets/exterior.png",
+    "to": "assets/exterior.webp",
+    "before": 2123501,
+    "after": 142392
+  },
+  {
+    "from": "assets/auditorium.png",
+    "to": "assets/auditorium.webp",
+    "before": 2539781,
+    "after": 218328
+  }
+]

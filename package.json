@@ -1,0 +1,12 @@
+{
+  "name": "ho-guom-opera",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check dist/app.js",
+    "build:booking": "node scripts/build-booking.mjs"
+  }
+}
